@@ -83,13 +83,19 @@
   <ItemGroup>
     <Compile Include="Config\Config.cs" />
     <Compile Include="Config\Connection.cs" />
+    <Compile Include="Config\Context.cs" />
     <Compile Include="Config\DatabaseCreater.cs" />
     <Compile Include="Config\Logger.cs" />
     <Compile Include="DAO\Impl\AdminDAO.cs" />
+    <Compile Include="DAO\Impl\CommentDAO.cs" />
+    <Compile Include="DAO\Impl\PostDAO.cs" />
+    <Compile Include="DAO\Impl\RoleDAO.cs" />
+    <Compile Include="DAO\Impl\UserLoginDAO.cs" />
     <Compile Include="DAO\Impl\UsersDAO.cs" />
     <Compile Include="DAO\Inter\IAdminDAO.cs" />
     <Compile Include="DAO\Inter\ICommentDAO.cs" />
     <Compile Include="DAO\Inter\IPostDAO.cs" />
+    <Compile Include="DAO\Inter\IRoleDAO.cs" />
     <Compile Include="DAO\Inter\IUserLoginDAO.cs" />
     <Compile Include="DAO\Inter\IUsersDAO.cs" />
     <Compile Include="Entity\Admin.cs" />

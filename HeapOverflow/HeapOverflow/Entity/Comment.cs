@@ -13,10 +13,11 @@ namespace HeapOverflow.Entity
         public string Topic { get; set; }
         public int LikeCount { get; set; }
         public int DislikeCount { get; set; }
+        public DateTime PostDate { get; set; }
 
         public override string ToString()
         {
-            return string.Format("Comment({0}, {1}, {2}, {3}, {4}, {5})", Id, User, Post, Topic, LikeCount, DislikeCount);
+            return string.Format("Comment({0}, {1}, {2}, {3}, {4}, {5}, {6})", Id, User, Post, Topic, LikeCount, DislikeCount, PostDate);
         }
     }
 }

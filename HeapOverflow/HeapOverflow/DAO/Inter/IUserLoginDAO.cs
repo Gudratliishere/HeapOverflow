@@ -10,7 +10,7 @@ namespace HeapOverflow.DAO.Inter
     public interface IUserLoginDAO
     {
         List<UserLogin> GetAll();
-        List<UserLogin> GetUserLoginByStatus(string email);
+        List<UserLogin> GetUserLoginByStatus(int status);
         List<UserLogin> GetUserLoginByRole(Role role);
         UserLogin GetUserLoginById(int id);
         UserLogin GetUserLoginByUsername(string username);

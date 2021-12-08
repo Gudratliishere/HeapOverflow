@@ -17,7 +17,12 @@ namespace HeapOverflow.DAO.Impl
         private MySqlConnection con;
         private MySqlCommand cmd;
 
-        AdminDAO()
+        public AdminDAO()
+        {
+            InitializeComponents();
+        }
+
+        private void InitializeComponents()
         {
             config = Configuration.GetConfig();
             con = new MySqlConnection(config.GetConnection().GenerateString());

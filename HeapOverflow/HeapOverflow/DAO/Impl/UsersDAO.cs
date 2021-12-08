@@ -11,13 +11,18 @@ namespace HeapOverflow.DAO.Impl
 {
     public class UsersDAO : IUsersDAO
     {
-        private readonly Logger _log = new Logger("AdminDAO");
+        private readonly Logger _log = new Logger("UsersDAO");
 
         private Configuration config;
         private MySqlConnection con;
         private MySqlCommand cmd;
 
-        UsersDAO()
+        public UsersDAO()
+        {
+            InitializeComponents();
+        }
+
+        private void InitializeComponents()
         {
             config = Configuration.GetConfig();
             con = new MySqlConnection(config.GetConnection().GenerateString());
