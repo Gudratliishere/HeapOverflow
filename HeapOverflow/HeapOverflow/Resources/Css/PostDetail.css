@@ -1,0 +1,26 @@
+﻿.head{
+    display:flex;
+    background-color: #2C2C2C;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.authors {
+    flex: 20%;
+}
+
+.content {
+    flex: 80%;
+}
+
+.body{
+    display: flex;
+    background-color: #131415;
+    padding: 10px;
+    margin: 5px;
+}
+
+.body .authors .username{
+    font-size: 20px;
+}

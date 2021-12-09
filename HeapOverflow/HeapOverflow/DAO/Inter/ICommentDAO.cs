@@ -9,7 +9,6 @@ namespace HeapOverflow.DAO.Inter
 {
     public interface ICommentDAO
     {
-        List<Comment> GetCommentsByUser(Users user);
         List<Comment> GetCommentsByPost(Post post);
         Comment AddComment(Comment comment);
         Comment UpdateComment(Comment comment);

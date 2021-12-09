@@ -74,38 +74,11 @@ namespace HeapOverflow.DAO.Impl
         {
             try
             {
-                string query = "select * from comment";
+                string query = "select * from comment where post = @post order by post_date";
 
                 con.Open();
                 cmd.CommandText = query;
-
-                var mdr = cmd.ExecuteReader();
-                List<Comment> comments = new List<Comment>();
-                while (mdr.Read())
-                {
-                    Comment comment = new Comment();
-                    FillCommentWithMDR(comment, mdr);
-                    comments.Add(comment);
-                }
-                return comments;
-            }
-            catch (Exception ex)
-            {
-                _log.Log(ex.Message + "\r\n" + ex.StackTrace);
-                con.Close();
-                return null;
-            }
-        }
-
-        public List<Comment> GetCommentsByUser(Users user)
-        {
-            try
-            {
-                string query = "select * from comment where user = @user";
-
-                con.Open();
-                cmd.CommandText = query;
-                cmd.Parameters.AddWithValue("@user", user.Id);
+                cmd.Parameters.AddWithValue("@post", post.Id);
 
                 var mdr = cmd.ExecuteReader();
                 List<Comment> comments = new List<Comment>();

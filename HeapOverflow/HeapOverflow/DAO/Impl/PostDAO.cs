@@ -72,7 +72,7 @@ namespace HeapOverflow.DAO.Impl
         {
             try
             {
-                string query = "select * from post";
+                string query = "select * from post order by post_date desc";
 
                 con.Open();
                 cmd.CommandText = query;
@@ -126,7 +126,7 @@ namespace HeapOverflow.DAO.Impl
         {
             try
             {
-                string query = "select * from post where user = @user";
+                string query = "select * from post where user = @user order by post_date desc";
 
                 con.Open();
                 cmd.CommandText = query;

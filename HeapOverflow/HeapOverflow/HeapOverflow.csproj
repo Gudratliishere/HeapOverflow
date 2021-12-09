@@ -78,6 +78,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Home\PostDetail.aspx" />
+    <Content Include="Resources\Css\Index.css" />
+    <Content Include="Resources\Css\PostDetail.css" />
+    <Content Include="Resources\Js\Index.js" />
+    <Content Include="Home\Index.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -104,10 +109,25 @@
     <Compile Include="Entity\Role.cs" />
     <Compile Include="Entity\UserLogin.cs" />
     <Compile Include="Entity\Users.cs" />
+    <Compile Include="Home\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\PostDetail.aspx.cs">
+      <DependentUpon>PostDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\PostDetail.aspx.designer.cs">
+      <DependentUpon>PostDetail.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <Content Include="Resources\Aquire-BW0ox.otf" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
