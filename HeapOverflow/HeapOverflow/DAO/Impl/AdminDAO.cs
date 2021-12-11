@@ -38,6 +38,7 @@ namespace HeapOverflow.DAO.Impl
                     "select LAST_INSERT_ID()";
 
                 con.Open();
+                cmd.Parameters.Clear();
                 cmd.CommandText = query;
                 cmd.Parameters.AddWithValue("@name", admin.Name);
                 cmd.Parameters.AddWithValue("@surname", admin.Surname);
@@ -70,6 +71,7 @@ namespace HeapOverflow.DAO.Impl
                 string query = "select * from admin where status = @status";
 
                 con.Open();
+                cmd.Parameters.Clear();
                 cmd.CommandText = query;
                 cmd.Parameters.AddWithValue("@status", status);
 
@@ -99,6 +101,7 @@ namespace HeapOverflow.DAO.Impl
                 string query = "select * from admin where email = @email";
 
                 con.Open();
+                cmd.Parameters.Clear();
                 cmd.CommandText = query;
                 cmd.Parameters.AddWithValue("@email", email);
 
@@ -127,6 +130,7 @@ namespace HeapOverflow.DAO.Impl
                 string query = "select * from admin where id = @id";
 
                 con.Open();
+                cmd.Parameters.Clear();
                 cmd.CommandText = query;
                 cmd.Parameters.AddWithValue("@id", id);
 
@@ -165,6 +169,7 @@ namespace HeapOverflow.DAO.Impl
                 string query = "delete from admin where id = @id";
 
                 con.Open();
+                cmd.Parameters.Clear();
                 cmd.CommandText = query;
                 cmd.Parameters.AddWithValue("@id", admin.Id);
                 cmd.ExecuteNonQuery();
@@ -187,6 +192,7 @@ namespace HeapOverflow.DAO.Impl
                 string query = "update admin set name = @name, surname = @surname, email = @email, password = @password, status = @status where id = @id";
 
                 con.Open();
+                cmd.Parameters.Clear();
                 cmd.CommandText = query;
                 cmd.Parameters.AddWithValue("@id", admin.Id);
                 cmd.Parameters.AddWithValue("@name", admin.Name);

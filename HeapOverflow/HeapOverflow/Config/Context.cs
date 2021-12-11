@@ -52,7 +52,7 @@ namespace HeapOverflow.Config
         {
             if (postDAO == null)
             {
-
+                postDAO = new PostDAO();
             }
 
             return postDAO;
@@ -62,7 +62,7 @@ namespace HeapOverflow.Config
         {
             if (commentDAO == null)
             {
-
+                commentDAO = new CommentDAO();
             }
 
             return commentDAO;

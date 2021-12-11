@@ -8,7 +8,7 @@ namespace HeapOverflow.Entity
     public class Comment
     {
         public int Id { get; set; }
-        public Users User { get; set; }
+        public UserLogin User { get; set; }
         public Post Post { get; set; }
         public string Topic { get; set; }
         public int LikeCount { get; set; }

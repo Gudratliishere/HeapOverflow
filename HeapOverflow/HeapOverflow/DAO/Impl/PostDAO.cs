@@ -17,7 +17,7 @@ namespace HeapOverflow.DAO.Impl
         private MySqlConnection con;
         private MySqlCommand cmd;
 
-        private IUsersDAO usersDAO;
+        private IUserLoginDAO loginDAO;
 
         public PostDAO()
         {
@@ -31,7 +31,7 @@ namespace HeapOverflow.DAO.Impl
             cmd = new MySqlCommand();
             cmd.Connection = con;
 
-            usersDAO = Context.GetUsersDAO();
+            loginDAO = Context.GetUserLoginDAO();
         }
 
         public Post AddPost(Post post)
@@ -42,6 +42,7 @@ namespace HeapOverflow.DAO.Impl
                     "@user, @post_date); select LAST_INSERT_ID()";
 
                 con.Open();
+                cmd.Parameters.Clear();
                 cmd.CommandText = query;
                 cmd.Parameters.AddWithValue("@name", post.Name);
                 cmd.Parameters.AddWithValue("@topic", post.Topic);
@@ -75,6 +76,7 @@ namespace HeapOverflow.DAO.Impl
                 string query = "select * from post order by post_date desc";
 
                 con.Open();
+                cmd.Parameters.Clear();
                 cmd.CommandText = query;
 
                 var mdr = cmd.ExecuteReader();
@@ -85,6 +87,7 @@ namespace HeapOverflow.DAO.Impl
                     FillPostWithMDR(post, mdr);
                     posts.Add(post);
                 }
+                con.Close();
                 return posts;
             }
             catch (Exception ex)
@@ -102,6 +105,7 @@ namespace HeapOverflow.DAO.Impl
                 string query = "select * from post where id = @id";
 
                 con.Open();
+                cmd.Parameters.Clear();
                 cmd.CommandText = query;
                 cmd.Parameters.AddWithValue("@id", id);
 
@@ -112,6 +116,7 @@ namespace HeapOverflow.DAO.Impl
                     post = new Post();
                     FillPostWithMDR(post, mdr);
                 }
+                con.Close();
                 return post;
             }
             catch (Exception ex)
@@ -129,6 +134,7 @@ namespace HeapOverflow.DAO.Impl
                 string query = "select * from post where user = @user order by post_date desc";
 
                 con.Open();
+                cmd.Parameters.Clear();
                 cmd.CommandText = query;
                 cmd.Parameters.AddWithValue("@user", user.Id);
 
@@ -140,6 +146,7 @@ namespace HeapOverflow.DAO.Impl
                     FillPostWithMDR(post, mdr);
                     posts.Add(post);
                 }
+                con.Close();
                 return posts;
             }
             catch (Exception ex)
@@ -159,7 +166,7 @@ namespace HeapOverflow.DAO.Impl
             post.DislikeCount = Convert.ToInt32(mdr.GetString(mdr.GetOrdinal("dislike_count")));
 
             int userId = Convert.ToInt32(mdr.GetString(mdr.GetOrdinal("user")));
-            post.User = usersDAO.GetUserById(userId);
+            post.User = loginDAO.GetUserLoginById(userId);
         }
 
         public Post RemovePost(Post post)
@@ -169,11 +176,13 @@ namespace HeapOverflow.DAO.Impl
                 string query = "delete from post where id = @id";
 
                 con.Open();
+                cmd.Parameters.Clear();
                 cmd.CommandText = query;
                 cmd.Parameters.AddWithValue("@id", post.Id);
 
                 if (cmd.ExecuteNonQuery() == 0)
                     throw new Exception("Error occured while deleting data with this id: " + post.Id);
+                con.Close();
                 return post;
             }
             catch (Exception ex)
@@ -192,6 +201,7 @@ namespace HeapOverflow.DAO.Impl
                     "post_date = @post_date where id = @id";
 
                 con.Open();
+                cmd.Parameters.Clear();
                 cmd.CommandText = query;
                 cmd.Parameters.AddWithValue("@id", post.Id);
                 cmd.Parameters.AddWithValue("@name", post.Name);
@@ -203,6 +213,7 @@ namespace HeapOverflow.DAO.Impl
 
                 if (cmd.ExecuteNonQuery() == 0)
                     throw new Exception("Error occured while updating data with this id: " + post.Id);
+                con.Close();
                 return post;
             }
             catch (Exception ex)

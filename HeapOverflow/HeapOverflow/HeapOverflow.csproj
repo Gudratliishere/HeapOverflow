@@ -78,17 +78,60 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Account\User.aspx" />
+    <Content Include="Account\UserEdit.aspx" />
+    <Content Include="Auth\Login.aspx" />
+    <Content Include="Auth\Register.aspx" />
+    <Content Include="Home\Logout.aspx" />
+    <Content Include="Home\NewPost.aspx" />
     <Content Include="Home\PostDetail.aspx" />
+    <Content Include="Image\example.jpg" />
     <Content Include="Resources\Css\Index.css" />
+    <Content Include="Resources\Css\Login.css" />
+    <Content Include="Resources\Css\NewPost.css" />
     <Content Include="Resources\Css\PostDetail.css" />
+    <Content Include="Resources\Css\Register.css" />
+    <Content Include="Resources\Css\User.css" />
+    <Content Include="Resources\Css\UserEdit.css" />
     <Content Include="Resources\Js\Index.js" />
     <Content Include="Home\Index.aspx" />
+    <Content Include="Resources\Js\Login.js" />
+    <Content Include="Resources\Js\Register.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Account\User.aspx.cs">
+      <DependentUpon>User.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\User.aspx.designer.cs">
+      <DependentUpon>User.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\UserEdit.aspx.cs">
+      <DependentUpon>UserEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\UserEdit.aspx.designer.cs">
+      <DependentUpon>UserEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Auth\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Auth\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Auth\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Auth\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Config\Config.cs" />
     <Compile Include="Config\Connection.cs" />
     <Compile Include="Config\Context.cs" />
+    <Compile Include="Config\Cryption.cs" />
     <Compile Include="Config\DatabaseCreater.cs" />
     <Compile Include="Config\Logger.cs" />
     <Compile Include="DAO\Impl\AdminDAO.cs" />
@@ -115,6 +158,20 @@
     </Compile>
     <Compile Include="Home\Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\NewPost.aspx.cs">
+      <DependentUpon>NewPost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\NewPost.aspx.designer.cs">
+      <DependentUpon>NewPost.aspx</DependentUpon>
     </Compile>
     <Compile Include="Home\PostDetail.aspx.cs">
       <DependentUpon>PostDetail.aspx</DependentUpon>

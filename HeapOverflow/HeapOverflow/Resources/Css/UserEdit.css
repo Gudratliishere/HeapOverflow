@@ -1,0 +1,29 @@
+﻿.container span, .container input {
+    display: block;
+    margin: 10px 0;
+    height: 30px;
+    border-radius: 20px;
+    border: solid 0;
+    padding: 8px;
+}
+
+.btn-login-body {
+    width: 130px;
+    background-color: dodgerblue;
+    transition: width 0.2s;
+    color: white;
+}
+
+    .btn-login-body:hover {
+        width: 170px;
+        background-color: blue;
+    }
+
+.login-label {
+    margin-top: 10px;
+}
+
+#show-hide-pass-input {
+    display: inline;
+    height: auto;
+}

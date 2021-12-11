@@ -37,6 +37,7 @@ namespace HeapOverflow.DAO.Impl
                 string query = "select * from role where id = @id";
 
                 con.Open();
+                cmd.Parameters.Clear();
                 cmd.CommandText = query;
                 cmd.Parameters.AddWithValue("@id", id);
 
@@ -45,10 +46,11 @@ namespace HeapOverflow.DAO.Impl
                 {
                     Role role = new Role();
                     FillRoleWithMDR(role, mdr);
+                    con.Close();
                     return role;
                 }
                 else
-                    throw new Exception("Error occured while new UserLogin inserting!");
+                    throw new Exception("There is no any role with this id!");
             }
             catch (Exception ex)
             {
@@ -63,6 +65,66 @@ namespace HeapOverflow.DAO.Impl
             role.Id = Convert.ToInt32(mdr.GetString(mdr.GetOrdinal("id")));
             role.Name = mdr.GetString(mdr.GetOrdinal("name"));
             role.Description = mdr.GetString(mdr.GetOrdinal("description"));
+        }
+
+        public Role GetUserRole()
+        {
+            try
+            {
+                string query = "select * from role where name = @name";
+
+                con.Open();
+                cmd.Parameters.Clear();
+                cmd.CommandText = query;
+                cmd.Parameters.AddWithValue("@name", "USER");
+
+                var mdr = cmd.ExecuteReader();
+                if (mdr.Read())
+                {
+                    Role role = new Role();
+                    FillRoleWithMDR(role, mdr);
+                    con.Close();
+                    return role;
+                }
+                else
+                    throw new Exception("There is no USER role!");
+            }
+            catch (Exception ex)
+            {
+                _log.Log(ex.Message + "\r\n" + ex.StackTrace);
+                con.Close();
+                return null;
+            }
+        }
+
+        public Role GetModeratorRole()
+        {
+            try
+            {
+                string query = "select * from role where name = @name";
+
+                con.Open();
+                cmd.Parameters.Clear();
+                cmd.CommandText = query;
+                cmd.Parameters.AddWithValue("@name", "MODERATOR");
+
+                var mdr = cmd.ExecuteReader();
+                if (mdr.Read())
+                {
+                    Role role = new Role();
+                    FillRoleWithMDR(role, mdr);
+                    con.Close();
+                    return role;
+                }
+                else
+                    throw new Exception("There is no MODERATOR role!");
+            }
+            catch (Exception ex)
+            {
+                _log.Log(ex.Message + "\r\n" + ex.StackTrace);
+                con.Close();
+                return null;
+            }
         }
     }
 }

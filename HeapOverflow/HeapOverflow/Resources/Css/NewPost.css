@@ -1,0 +1,24 @@
+﻿#tb_name{
+    width: 200px;
+    height: 30px;
+}
+
+#tb_topic {
+    width: 400px;
+    height: 200px;
+}
+
+#btn_post{
+    width: 100px;
+    height: 30px;
+    float: right;
+    margin-bottom: 10px;
+    background-color: green;
+    color: white;
+    border: solid 2px #003b00;
+}
+
+#tb_name, #tb_topic, #btn_post {
+    display: block;
+    margin-top: 10px;
+}

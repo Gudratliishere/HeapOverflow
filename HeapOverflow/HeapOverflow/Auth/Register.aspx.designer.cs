@@ -7,19 +7,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HeapOverflow.Home {
+namespace HeapOverflow.Auth {
     
     
-    public partial class Index {
+    public partial class Register {
         
         /// <summary>
-        /// index control.
+        /// register control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm index;
+        protected global::System.Web.UI.HtmlControls.HtmlForm register;
         
         /// <summary>
         /// btn_home control.
@@ -29,15 +29,6 @@ namespace HeapOverflow.Home {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btn_home;
-        
-        /// <summary>
-        /// btn_account control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_account;
         
         /// <summary>
         /// btn_login control.
@@ -67,21 +58,57 @@ namespace HeapOverflow.Home {
         protected global::System.Web.UI.WebControls.Button btn_logout;
         
         /// <summary>
-        /// btn_new control.
+        /// tb_username control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_new;
+        protected global::System.Web.UI.WebControls.TextBox tb_username;
         
         /// <summary>
-        /// ph_table_row control.
+        /// tb_email control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder ph_table_row;
+        protected global::System.Web.UI.WebControls.TextBox tb_email;
+        
+        /// <summary>
+        /// tb_password control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tb_password;
+        
+        /// <summary>
+        /// tb_cpassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tb_cpassword;
+        
+        /// <summary>
+        /// btn_registerBody control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_registerBody;
+        
+        /// <summary>
+        /// lbl_message control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_message;
     }
 }

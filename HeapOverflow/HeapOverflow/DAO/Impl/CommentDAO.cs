@@ -17,7 +17,7 @@ namespace HeapOverflow.DAO.Impl
         private MySqlConnection con;
         private MySqlCommand cmd;
 
-        private IUsersDAO usersDAO;
+        private IUserLoginDAO loginDAO;
         private IPostDAO postDAO;
 
         public CommentDAO()
@@ -32,7 +32,7 @@ namespace HeapOverflow.DAO.Impl
             cmd = new MySqlCommand();
             cmd.Connection = con;
 
-            usersDAO = Context.GetUsersDAO();
+            loginDAO = Context.GetUserLoginDAO();
             postDAO = Context.GetPostDAO();
         }
 
@@ -40,10 +40,11 @@ namespace HeapOverflow.DAO.Impl
         {
             try
             {
-                string query = "insert into comment (user, post, topic, like_count, _dislike_count, post_date) values (@user, @post, @topic, @like_count," +
+                string query = "insert into comment (user, post, topic, like_count, dislike_count, post_date) values (@user, @post, @topic, @like_count," +
                     " @dislike_count, @post_date); select LAST_INSERT_ID()";
 
                 con.Open();
+                cmd.Parameters.Clear();
                 cmd.CommandText = query;
                 cmd.Parameters.AddWithValue("@user", comment.User.Id);
                 cmd.Parameters.AddWithValue("@post", comment.Post.Id);
@@ -77,6 +78,7 @@ namespace HeapOverflow.DAO.Impl
                 string query = "select * from comment where post = @post order by post_date";
 
                 con.Open();
+                cmd.Parameters.Clear();
                 cmd.CommandText = query;
                 cmd.Parameters.AddWithValue("@post", post.Id);
 
@@ -88,6 +90,7 @@ namespace HeapOverflow.DAO.Impl
                     FillCommentWithMDR(comment, mdr);
                     comments.Add(comment);
                 }
+                con.Close();
                 return comments;
             }
             catch (Exception ex)
@@ -103,9 +106,10 @@ namespace HeapOverflow.DAO.Impl
             comment.Id = Convert.ToInt32(mdr.GetString(mdr.GetOrdinal("id")));
             comment.LikeCount = Convert.ToInt32(mdr.GetString(mdr.GetOrdinal("like_count")));
             comment.DislikeCount = Convert.ToInt32(mdr.GetString(mdr.GetOrdinal("dislike_count")));
+            comment.Topic = mdr.GetString(mdr.GetOrdinal("topic"));
 
             int userId = Convert.ToInt32(mdr.GetString(mdr.GetOrdinal("user")));
-            comment.User = usersDAO.GetUserById(userId);
+            comment.User = loginDAO.GetUserLoginById(userId);
 
             int postId = Convert.ToInt32(mdr.GetString(mdr.GetOrdinal("post")));
             comment.Post = postDAO.GetPostById(postId);
@@ -118,11 +122,13 @@ namespace HeapOverflow.DAO.Impl
                 string query = "delete from comment where id = @id";
 
                 con.Open();
+                cmd.Parameters.Clear();
                 cmd.CommandText = query;
                 cmd.Parameters.AddWithValue("@id", comment.Id);
 
                 if (cmd.ExecuteNonQuery() == 0)
                     throw new Exception("Error occured while deleting data with this id: " + comment.Id);
+                con.Close();
                 return comment;
             }
             catch (Exception ex)
@@ -141,6 +147,7 @@ namespace HeapOverflow.DAO.Impl
                     "post_date = @post_date where id = @id";
 
                 con.Open();
+                cmd.Parameters.Clear();
                 cmd.CommandText = query;
                 cmd.Parameters.AddWithValue("@id", comment.Id);
                 cmd.Parameters.AddWithValue("@user", comment.User.Id);
@@ -152,6 +159,7 @@ namespace HeapOverflow.DAO.Impl
 
                 if (cmd.ExecuteNonQuery() == 0)
                     throw new Exception("Error occured while updating data with this id: " + comment.Id);
+                con.Close();
                 return comment;
             }
             catch (Exception ex)

@@ -9,10 +9,24 @@ html {
     color: #FEFEFE;
 }
 
-a {
+.nav-item input {
+    border-radius: 20px;
+    display: block;
+    background-color: transparent;
+    border: solid 0;
+    width: 90px;
+    height: 50px;
     color: #FF0042;
     font-weight: bolder;
     text-decoration: none;
+    float: right;
+    text-align: center;
+    padding: 10px;
+    color: #fff;
+}
+
+.nav-item input:hover {
+    background-color: rgba(0, 0, 0, 0.25);
 }
 
 h1 {
@@ -108,7 +122,7 @@ header {
 .navigation {
     background-color: #52057b;
     padding: 10px;
-    width: 65%;
+    width: 40%;
     display: inline-block;
     border-radius: 10px;
     max-height: 80px;
@@ -119,20 +133,6 @@ header {
     list-style-type: none;
     overflow: hidden;
 }
-
-.nav-item a {
-    float: right;
-    display: block;
-    text-align: center;
-    margin-inline: 20px;
-    font-size: 20px;
-    padding: 10px;
-    color: #fff;
-}
-
-    .nav-item a:hover {
-        background-color: rgb(0, 0, 0, 0.1);
-    }
 
 .close-icon i {
     font-size: 60px;
@@ -295,4 +295,17 @@ footer {
 
 .hide {
     display: none;
+}
+
+#btn_new {
+    width: 150px;
+    height: 30px;
+    margin-bottom: 10px;
+    background-color: #131415;
+    border: 0;
+    color: white;
+}
+
+#btn_new:hover {
+    background-color: #131400;
 }

@@ -1,0 +1,21 @@
+﻿#lbl_name, #lbl_surname {
+    font-size: 40px;
+    margin-right: 20px;
+}
+
+#img_profile {
+    width: 200px;
+    height: 200px;
+    margin-right: 20px;
+}
+
+#lbl_post, #lbl_star {
+    margin-top: 20px;
+}
+
+#btn_edit {
+    width: 70px;
+    height: 30px;
+    border: solid 0;
+    border-radius: 15px;
+}

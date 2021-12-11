@@ -11,8 +11,8 @@ namespace HeapOverflow.Entity
         public string Name { get; set; }
         public string Topic { get; set; }
         public int LikeCount { get; set; }
-        public int DislikeCount { get; set; }
-        public Users User { get; set; }
+        public int DislikeCount { get; set; } 
+        public UserLogin User { get; set; }
         public DateTime PostDate { get; set; }
 
         public override string ToString()

@@ -10,5 +10,7 @@ namespace HeapOverflow.DAO.Inter
     public interface IRoleDAO
     {
         Role GetRoleById(int id);
+        Role GetUserRole();
+        Role GetModeratorRole();
     }
 }

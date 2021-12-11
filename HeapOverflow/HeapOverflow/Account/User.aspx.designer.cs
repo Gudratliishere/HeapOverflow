@@ -7,19 +7,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HeapOverflow.Home {
+namespace HeapOverflow.Account {
     
     
-    public partial class Index {
+    public partial class User {
         
         /// <summary>
-        /// index control.
+        /// user control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm index;
+        protected global::System.Web.UI.HtmlControls.HtmlForm user;
         
         /// <summary>
         /// btn_home control.
@@ -40,48 +40,66 @@ namespace HeapOverflow.Home {
         protected global::System.Web.UI.WebControls.Button btn_account;
         
         /// <summary>
-        /// btn_login control.
+        /// img_profile control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_login;
+        protected global::System.Web.UI.WebControls.Image img_profile;
         
         /// <summary>
-        /// btn_register control.
+        /// lbl_name control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_register;
+        protected global::System.Web.UI.WebControls.Label lbl_name;
         
         /// <summary>
-        /// btn_logout control.
+        /// lbl_surname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_logout;
+        protected global::System.Web.UI.WebControls.Label lbl_surname;
         
         /// <summary>
-        /// btn_new control.
+        /// btn_edit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_new;
+        protected global::System.Web.UI.WebControls.Button btn_edit;
         
         /// <summary>
-        /// ph_table_row control.
+        /// lbl_post control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder ph_table_row;
+        protected global::System.Web.UI.WebControls.Label lbl_post;
+        
+        /// <summary>
+        /// lbl_star control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_star;
+        
+        /// <summary>
+        /// lbl_description control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_description;
     }
 }

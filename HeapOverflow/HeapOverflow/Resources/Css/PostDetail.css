@@ -24,3 +24,66 @@
 .body .authors .username{
     font-size: 20px;
 }
+
+.remove {
+    background-color: rgb(50, 65, 60);
+    border: solid 0;
+    width: 70px;
+    height: 20px;
+    border-radius: 10px;
+    color: white;
+}
+
+.comment-body {
+    display: block;
+    background-color: #131415;
+    padding: 10px;
+    margin: 5px;
+    margin-left: 10px;
+}
+
+.comment-item {
+    width: 100%;
+    margin: 10px 0;
+}
+
+#lbl_usernameComment     {
+    font-size: 17px;
+}
+
+#lbl_comment {
+    font-size: 14px;
+}
+
+.like-dislike {
+    float: right;
+}
+
+.like, .dislike {
+    background-color: #2C2C2C;
+    color: white;
+    border: 0;
+    border-radius: 10px;
+    width: 80px;
+    height: 20px;
+}
+
+.like:hover, .dislike:hover {
+    color: #bbb;
+}
+
+.write-comment {
+    margin-top: 20px;
+    width: 100%;
+}
+
+#tb_comment {
+    width: 800px;;
+    height: 50px;
+}
+
+#btn_postComment {
+    float: right;
+    width: 80px;
+    height: 30px;
+}

@@ -8,12 +8,12 @@ namespace HeapOverflow.Entity
     public class Users
     {
         public int Id { get; set; }
-        public string Name { get; set; }
-        public string Surname { get; set; }
-        public string PhotoPath { get; set; }
-        public string Description { get; set; }
-        public int Post { get; set; }
-        public int Star { get; set; }
+        public string Name { get; set; } = string.Empty;
+        public string Surname { get; set; } = string.Empty;
+        public string PhotoPath { get; set; } = string.Empty;
+        public string Description { get; set; } = string.Empty;
+        public int Post { get; set; } = 0;
+        public int Star { get; set; } = 0;
 
         public override string ToString()
         {

@@ -38,6 +38,7 @@ namespace HeapOverflow.DAO.Impl
                     "@post, @star); select LAST_INSERT_ID()";
 
                 con.Open();
+                cmd.Parameters.Clear();
                 cmd.CommandText = query;
                 cmd.Parameters.AddWithValue("@name", user.Name);
                 cmd.Parameters.AddWithValue("@surname", user.Surname);
@@ -71,8 +72,9 @@ namespace HeapOverflow.DAO.Impl
                 string query = "select * from users where id = @id";
 
                 con.Open();
+                cmd.Parameters.Clear();
                 cmd.CommandText = query;
-                cmd.Parameters.AddWithValue("@name", id);
+                cmd.Parameters.AddWithValue("@id", id);
 
                 var mdr = cmd.ExecuteReader();
                 Users user = null;
@@ -110,8 +112,9 @@ namespace HeapOverflow.DAO.Impl
                 string query = "delete from users where id = @id";
 
                 con.Open();
+                cmd.Parameters.Clear();
                 cmd.CommandText = query;
-                cmd.Parameters.AddWithValue("@name", user.Id);
+                cmd.Parameters.AddWithValue("@id", user.Id);
                 cmd.ExecuteNonQuery();
 
                 con.Close();
@@ -133,8 +136,9 @@ namespace HeapOverflow.DAO.Impl
                     "star = @star where id = @id";
 
                 con.Open();
+                cmd.Parameters.Clear();
                 cmd.CommandText = query;
-                cmd.Parameters.AddWithValue("@name", user.Id);
+                cmd.Parameters.AddWithValue("@id", user.Id);
                 cmd.Parameters.AddWithValue("@name", user.Name);
                 cmd.Parameters.AddWithValue("@surname", user.Surname);
                 cmd.Parameters.AddWithValue("@photo_path", user.PhotoPath);

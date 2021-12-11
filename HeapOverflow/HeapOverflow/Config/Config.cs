@@ -117,8 +117,8 @@ namespace HeapOverflow.Config
             connection.Host = "localhost";
             connection.Port = "3306";
             connection.Username = "root";
-            connection.Password = "12345678";
-            connection.Database = "supershop";
+            connection.Password = "2002";
+            connection.Database = "heapoverflow";
         }
     }
 }

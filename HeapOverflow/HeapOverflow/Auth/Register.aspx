@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="PostDetail.aspx.cs" Inherits="HeapOverflow.Home.PostDetail" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="HeapOverflow.Auth.Register" %>
 
 <!DOCTYPE html>
 
@@ -6,12 +6,13 @@
 <head runat="server">
 	<title>HeapOverflow</title>
 	<link rel="stylesheet" href="../Resources/Css/Index.css" />
-	<link rel="stylesheet" href="../Resources/Css/PostDetail.css" />
+	<link rel="stylesheet" href="../Resources/Css/Register.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 	<script src="../Resources/Js/Index.js"></script>
+	<script src="../Resources/Js/Register.js"></script>
 </head>
 <body>
-	<form id="postDetail" runat="server">
+	<form id="register" runat="server">
 		<header>
 			<div class="navbar">
 				<nav class="navigation hide" id="navigation">
@@ -20,9 +21,6 @@
 						<li class="nav-item">
 							<asp:Button ID="btn_home" runat="server" Text="Home" OnClick="btn_home_Click" />
 						</li>
-						<li class="nav-item">
-							<asp:Button ID="btn_account" runat="server" Text="Account" OnClick="btn_account_Click" />
-						</li>
 					</ul>
 				</nav>
 				<a href="#" class="bar-icon" id="iconBar"><i class="fa fa-bars" onclick="hideIconBar()"></i></a>
@@ -30,37 +28,36 @@
 				<div class="account">
 					<asp:Button ID="btn_login" runat="server" Text="Login" CssClass="login" OnClick="btn_login_Click" />
 					<asp:Button ID="btn_register" runat="server" Text="Register" CssClass="register" OnClick="btn_register_Click" />
-					<asp:Button ID="btn_logout" runat="server" Text="Logout" CssClass="logout" OnClick="btn_logout_Click" />
+					<asp:Button ID="btn_logout" runat="server" Text="Logout" CssClass="logout" />
 				</div>
 			</div>
 		</header>
 		<div class="container">
-			<div class="topic-container">
-				<div class="head">
-					<asp:Label ID="lbl_name" runat="server" Text="Post name" CssClass="content"></asp:Label>
-					<asp:Button ID="btn_removePost" runat="server" Text="Remove" CssClass="remove" />
-				</div>
+			<center>
+				<div class="login-body">
+					<div class="login-label">Username: </div>
+					<asp:TextBox ID="tb_username" runat="server"></asp:TextBox>
 
-				<div class="body">
-					<div class="authors">
-						<asp:Label ID="lbl_username" runat="server" Text="Username" CssClass="username"></asp:Label>
-						<br />
-						<asp:Label ID="lbl_topic" runat="server" Text="Topic" CssClass="content"></asp:Label>
-						<div class="like-dislike">
-							<asp:Button ID="btn_postLike" runat="server" Text="Like (8)" CssClass="like" OnClick="btn_postLike_Click"/>
-							<asp:Button ID="btn_postDislike" runat="server" Text="Dislike (3)"  CssClass="dislike" OnClick="btn_postDislike_Click"/>
-						</div>
-					</div>
-				</div>
+					<div class="login-label">Email: </div>
+					<asp:TextBox ID="tb_email" TextMode="Email" runat="server"></asp:TextBox>
 
-				<div class="comment-body">
-					<asp:PlaceHolder ID="ph_comment_item" runat="server"></asp:PlaceHolder>
-					<div class="write-comment">
-						<asp:TextBox ID="tb_comment" runat="server" TextMode="MultiLine" placeholder="Topic..."></asp:TextBox>
-						<asp:Button ID="btn_postComment" runat="server" Text="Send" OnClick="btn_postComment_Click" />
+					<div class="login-label">Password: </div>
+					<asp:TextBox ID="tb_password" TextMode="Password" runat="server"></asp:TextBox>
+
+					<div class="login-label">Confirm password: </div>
+					<asp:TextBox ID="tb_cpassword" TextMode="Password" runat="server"></asp:TextBox>
+
+					<div>
+						<input type="checkbox" onclick="showHidePassword()" id="show-hide-pass-input" />
+						<label id="show-hide-pass-label" for="show-hide-pass-input">Show</label>
 					</div>
+
+					<asp:Button ID="btn_registerBody" runat="server" Text="Register" CssClass="btn-register-body" OnClick="btn_registerBody_Click" />
+					<br />
+
+					<asp:Label ID="lbl_message" runat="server" Text="Something message"></asp:Label>
 				</div>
-			</div>
+			</center>
 		</div>
 
 		<div class="forum-info">
@@ -82,3 +79,4 @@
 	</form>
 </body>
 </html>
+

@@ -44,6 +44,7 @@ namespace HeapOverflow.DAO.Impl
                     "@role, @user); select LAST_INSERT_ID()";
 
                 con.Open();
+                cmd.Parameters.Clear();
                 cmd.CommandText = query;
                 cmd.Parameters.AddWithValue("@username", login.Username);
                 cmd.Parameters.AddWithValue("@email", login.Email);
@@ -77,6 +78,7 @@ namespace HeapOverflow.DAO.Impl
                 string query = "select * from user_login";
 
                 con.Open();
+                cmd.Parameters.Clear();
                 cmd.CommandText = query;
 
                 var mdr = cmd.ExecuteReader();
@@ -87,6 +89,7 @@ namespace HeapOverflow.DAO.Impl
                     FillUserLoginWithMDR(login, mdr);
                     logins.Add(login);
                 }
+                con.Close();
                 return logins;
             }
             catch (Exception ex)
@@ -104,6 +107,7 @@ namespace HeapOverflow.DAO.Impl
                 string query = "select * from user_login where email = @email";
 
                 con.Open();
+                cmd.Parameters.Clear();
                 cmd.CommandText = query;
                 cmd.Parameters.AddWithValue("@email", email);
 
@@ -114,6 +118,7 @@ namespace HeapOverflow.DAO.Impl
                     login = new UserLogin();
                     FillUserLoginWithMDR(login, mdr);
                 }
+                con.Close();
                 return login;
             }
             catch (Exception ex)
@@ -131,6 +136,7 @@ namespace HeapOverflow.DAO.Impl
                 string query = "select * from user_login where id = @id";
 
                 con.Open();
+                cmd.Parameters.Clear();
                 cmd.CommandText = query;
                 cmd.Parameters.AddWithValue("@id", id);
 
@@ -141,6 +147,7 @@ namespace HeapOverflow.DAO.Impl
                     login = new UserLogin();
                     FillUserLoginWithMDR(login, mdr);
                 }
+                con.Close();
                 return login;
             }
             catch (Exception ex)
@@ -158,6 +165,7 @@ namespace HeapOverflow.DAO.Impl
                 string query = "select * from user_login where role = @role";
 
                 con.Open();
+                cmd.Parameters.Clear();
                 cmd.CommandText = query;
                 cmd.Parameters.AddWithValue("@role", role.Id);
 
@@ -169,6 +177,7 @@ namespace HeapOverflow.DAO.Impl
                     FillUserLoginWithMDR(login, mdr);
                     logins.Add(login);
                 }
+                con.Close();
                 return logins;
             }
             catch (Exception ex)
@@ -186,6 +195,7 @@ namespace HeapOverflow.DAO.Impl
                 string query = "select * from user_login where status = @status";
 
                 con.Open();
+                cmd.Parameters.Clear();
                 cmd.CommandText = query;
                 cmd.Parameters.AddWithValue("@status", status);
 
@@ -197,6 +207,7 @@ namespace HeapOverflow.DAO.Impl
                     FillUserLoginWithMDR(login, mdr);
                     logins.Add(login);
                 }
+                con.Close();
                 return logins;
             }
             catch (Exception ex)
@@ -214,6 +225,7 @@ namespace HeapOverflow.DAO.Impl
                 string query = "select * from user_login where user = @user";
 
                 con.Open();
+                cmd.Parameters.Clear();
                 cmd.CommandText = query;
                 cmd.Parameters.AddWithValue("@user", user.Id);
 
@@ -224,6 +236,7 @@ namespace HeapOverflow.DAO.Impl
                     login = new UserLogin();
                     FillUserLoginWithMDR(login, mdr);
                 }
+                con.Close();
                 return login;
             }
             catch (Exception ex)
@@ -241,6 +254,7 @@ namespace HeapOverflow.DAO.Impl
                 string query = "select * from user_login where username = @username";
 
                 con.Open();
+                cmd.Parameters.Clear();
                 cmd.CommandText = query;
                 cmd.Parameters.AddWithValue("@username", username);
 
@@ -251,6 +265,7 @@ namespace HeapOverflow.DAO.Impl
                     login = new UserLogin();
                     FillUserLoginWithMDR(login, mdr);
                 }
+                con.Close();
                 return login;
             }
             catch (Exception ex)
@@ -287,12 +302,14 @@ namespace HeapOverflow.DAO.Impl
                 string query = "delete from user_login where id = @id";
 
                 con.Open();
+                cmd.Parameters.Clear();
                 cmd.CommandText = query;
                 cmd.Parameters.AddWithValue("@id", login.Id);
 
                 if (cmd.ExecuteNonQuery() == 0)
                     throw new Exception("Error occured while deleting column with this id: " + login.Id);
 
+                con.Close();
                 return login;
             }
             catch (Exception ex)
@@ -311,6 +328,7 @@ namespace HeapOverflow.DAO.Impl
                     "where id = @id";
 
                 con.Open();
+                cmd.Parameters.Clear();
                 cmd.CommandText = query;
                 cmd.Parameters.AddWithValue("@id", login.Id);
                 cmd.Parameters.AddWithValue("@username", login.Username);
@@ -323,6 +341,7 @@ namespace HeapOverflow.DAO.Impl
                 if (cmd.ExecuteNonQuery() == 0)
                     throw new Exception("Error occured while updating column with this id: " + login.Id);
 
+                con.Close();
                 return login;
             }
             catch (Exception ex)
