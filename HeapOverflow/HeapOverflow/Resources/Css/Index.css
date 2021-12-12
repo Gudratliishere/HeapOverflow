@@ -121,7 +121,7 @@ header {
 
 .navigation {
     background-color: #52057b;
-    padding: 10px;
+    padding-right: 10px;
     width: 40%;
     display: inline-block;
     border-radius: 10px;
@@ -135,10 +135,19 @@ header {
 }
 
 .close-icon i {
-    font-size: 60px;
+    width: 60px;
+    height: 50px;
+    text-align: center;
+    padding-top: 5px;
+    border-radius: 10px;
+    font-size: 40px;
     float: left;
     cursor: pointer;
 }
+
+    .close-icon i:hover {
+        background-color: rgba(0, 0, 0, 0.25);
+    }
 
 .hide {
     display: none;
@@ -245,7 +254,8 @@ footer {
 
     .table-row .status {
         flex: 5%;
-        font-size: 30px;
+        padding-top: 15px;
+        font-size: 20px;
         text-align: center;
     }
 
@@ -308,4 +318,30 @@ footer {
 
 #btn_new:hover {
     background-color: #131400;
+}
+
+#ddl_filter {
+    border: 0;
+    border-radius: 20px;
+}
+
+#tb_search {
+    border: 0;
+    border-radius: 20px;
+    width: 100px;
+    transition: 0.1s;
+}
+
+#tb_search:focus {
+    width: 200px;
+}
+
+#btn_search {
+    border: 0;
+    border-radius: 20px;
+    width: 80px;
+}
+
+#btn_search:focus {
+    background-color: silver;
 }

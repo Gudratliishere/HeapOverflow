@@ -55,7 +55,7 @@
 					<asp:Button ID="btn_registerBody" runat="server" Text="Register" CssClass="btn-register-body" OnClick="btn_registerBody_Click" />
 					<br />
 
-					<asp:Label ID="lbl_message" runat="server" Text="Something message"></asp:Label>
+					<asp:Label ID="lbl_message" runat="server" Text=""></asp:Label>
 				</div>
 			</center>
 		</div>

@@ -14,27 +14,50 @@ namespace HeapOverflow.Home
     public partial class Index : Page
     {
         private IPostDAO postDAO = Config.Context.GetPostDAO();
+        private ICommentDAO commentDAO = Config.Context.GetCommentDAO();
 
         protected void Page_Load(object sender, EventArgs e)
         {
             CheckAccountButtons();
-            FillPosts();
+            FillPosts(postDAO.GetAll());
         }
 
-        private void FillPosts()
+        private void FillPosts(List<Post> posts)
         {
-            var posts = postDAO.GetAll();
+            ph_table_row.Controls.Clear();
             posts.ForEach((post) =>
             {
-                var div_status = GetDivStatus();
-                var div_subject = GetDivSubject(post);
-
+                var table_row = GetDivTableRow(post);
+                ph_table_row.Controls.Add(table_row);
             });
+        }
+
+        private HtmlGenericControl GetDivTableRow (Post post)
+        {
+            HtmlGenericControl table_row = new HtmlGenericControl("div");
+            table_row.Attributes.Add("class", "table-row");
+            table_row.Controls.Add(GetDivStatus());
+            table_row.Controls.Add(GetDivSubject(post));
+            table_row.Controls.Add(GetDivReplies(post));
+            table_row.Controls.Add(GetDevider());
+            return table_row;
+        }
+
+        private HtmlGenericControl GetDevider ()
+        {
+            HtmlGenericControl devider = new HtmlGenericControl("hr");
+            devider.Attributes.Add("class", "subforum-devider");
+            return devider;
         }
 
         private HtmlGenericControl GetDivReplies (Post post)
         {
+            HtmlGenericControl span = new HtmlGenericControl("span");
+            span.InnerHtml = commentDAO.GetCommentsByPost(post).Count.ToString() + " replies\n" + post.LikeCount + " likes";
+
             HtmlGenericControl replies = new HtmlGenericControl("div");
+            replies.Attributes.Add("class", "replies");
+            replies.Controls.Add(span);
             return replies;
         }
 
@@ -115,6 +138,17 @@ namespace HeapOverflow.Home
         protected void btn_new_Click(object sender, EventArgs e)
         {
             Response.Redirect("NewPost.aspx");
+        }
+
+        protected void btn_search_Click(object sender, EventArgs e)
+        {
+            var key = tb_search.Text.Trim();
+            if (ddl_filter.SelectedIndex == 0)
+                FillPosts(postDAO.GetPostWhereNameOrTopicContain(key));
+            else if (ddl_filter.SelectedIndex == 1)
+                FillPosts(postDAO.GetPostWhereNameContain(key));
+            else if (ddl_filter.SelectedIndex == 2)
+                FillPosts(postDAO.GetPostWhereTopicContain(key));
         }
     }
 }

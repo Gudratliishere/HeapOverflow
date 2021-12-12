@@ -53,7 +53,7 @@ namespace HeapOverflow.Account
 
         protected void btn_home_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Index.aspx");
+            Response.Redirect("../Home/Index.aspx");
         }
 
         protected void btn_save_Click(object sender, EventArgs e)

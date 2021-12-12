@@ -67,6 +67,33 @@ namespace HeapOverflow.Home {
         protected global::System.Web.UI.WebControls.Button btn_logout;
         
         /// <summary>
+        /// ddl_filter control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddl_filter;
+        
+        /// <summary>
+        /// tb_search control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tb_search;
+        
+        /// <summary>
+        /// btn_search control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_search;
+        
+        /// <summary>
         /// btn_new control.
         /// </summary>
         /// <remarks>

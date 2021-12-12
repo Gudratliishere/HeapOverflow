@@ -80,12 +80,19 @@
   <ItemGroup>
     <Content Include="Account\User.aspx" />
     <Content Include="Account\UserEdit.aspx" />
+    <Content Include="Auth\Admin.aspx" />
     <Content Include="Auth\Login.aspx" />
     <Content Include="Auth\Register.aspx" />
+    <Content Include="Home\AdminPanel.aspx" />
+    <Content Include="Home\AdminUserEdit.aspx" />
     <Content Include="Home\Logout.aspx" />
     <Content Include="Home\NewPost.aspx" />
     <Content Include="Home\PostDetail.aspx" />
+    <Content Include="Home\RemovePost.aspx" />
     <Content Include="Image\example.jpg" />
+    <Content Include="Resources\Css\Admin.css" />
+    <Content Include="Resources\Css\AdminPanel.css" />
+    <Content Include="Resources\Css\AdminUserEdit.css" />
     <Content Include="Resources\Css\Index.css" />
     <Content Include="Resources\Css\Login.css" />
     <Content Include="Resources\Css\NewPost.css" />
@@ -93,6 +100,7 @@
     <Content Include="Resources\Css\Register.css" />
     <Content Include="Resources\Css\User.css" />
     <Content Include="Resources\Css\UserEdit.css" />
+    <Content Include="Resources\Js\AdminPanel.js" />
     <Content Include="Resources\Js\Index.js" />
     <Content Include="Home\Index.aspx" />
     <Content Include="Resources\Js\Login.js" />
@@ -113,6 +121,13 @@
     </Compile>
     <Compile Include="Account\UserEdit.aspx.designer.cs">
       <DependentUpon>UserEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Auth\Admin.aspx.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Auth\Admin.aspx.designer.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
     </Compile>
     <Compile Include="Auth\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -152,6 +167,20 @@
     <Compile Include="Entity\Role.cs" />
     <Compile Include="Entity\UserLogin.cs" />
     <Compile Include="Entity\Users.cs" />
+    <Compile Include="Home\AdminPanel.aspx.cs">
+      <DependentUpon>AdminPanel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\AdminPanel.aspx.designer.cs">
+      <DependentUpon>AdminPanel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\AdminUserEdit.aspx.cs">
+      <DependentUpon>AdminUserEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\AdminUserEdit.aspx.designer.cs">
+      <DependentUpon>AdminUserEdit.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Home\Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -179,6 +208,13 @@
     </Compile>
     <Compile Include="Home\PostDetail.aspx.designer.cs">
       <DependentUpon>PostDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\RemovePost.aspx.cs">
+      <DependentUpon>RemovePost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\RemovePost.aspx.designer.cs">
+      <DependentUpon>RemovePost.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

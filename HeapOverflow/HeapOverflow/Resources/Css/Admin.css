@@ -1,0 +1,10 @@
+﻿* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 14px;
+    font-family: 'Titillium', sans-serif;
+    background-color: rgb(0, 0, 0);
+    color: #FEFEFE;
+}

@@ -160,5 +160,10 @@ namespace HeapOverflow.Home
             commentDAO.AddComment(comment);
             Response.Redirect("PostDetail.aspx?id=" + post.Id);
         }
+
+        protected void btn_removePost_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("RemovePost.aspx?id=" + post.Id);
+        }
     }
 }

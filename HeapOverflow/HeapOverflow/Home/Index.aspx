@@ -27,8 +27,8 @@
 				<a href="#" class="bar-icon" id="iconBar"><i class="fa fa-bars" onclick="hideIconBar()"></i></a>
 				<div class="brand">Heap Overflow</div>
 				<div class="account">
-					<asp:Button ID="btn_login" runat="server" Text="Login" CssClass="login" OnClick="btn_login_Click"/>
-					<asp:Button ID="btn_register" runat="server" Text="Register" CssClass="register" OnClick="btn_register_Click"/>
+					<asp:Button ID="btn_login" runat="server" Text="Login" CssClass="login" OnClick="btn_login_Click" />
+					<asp:Button ID="btn_register" runat="server" Text="Register" CssClass="register" OnClick="btn_register_Click" />
 					<asp:Button ID="btn_logout" runat="server" Text="Logout" CssClass="logout" OnClick="btn_logout_Click" />
 				</div>
 			</div>
@@ -36,13 +36,13 @@
 			<!--search box-->
 			<div class="search-box">
 				<div>
-					<select name="" id="">
-						<option value="everything">Everything</option>
-						<option value="titles">Titles</option>
-						<option value="descriptions">Descriptions</option>
-					</select>
-					<input type="text" name="q" id="" placeholder="search..." />
-					<button><i class="fa fa-search"></i></button>
+					<asp:DropDownList ID="ddl_filter" runat="server">
+						<asp:ListItem Selected="True">Everything</asp:ListItem>
+						<asp:ListItem>Title</asp:ListItem>
+						<asp:ListItem>Topic</asp:ListItem>
+					</asp:DropDownList>
+					<asp:TextBox ID="tb_search" runat="server" placeholder="search..."></asp:TextBox>
+					<asp:Button ID="btn_search" runat="server" Text="Search" OnClick="btn_search_Click"/>
 				</div>
 			</div>
 		</header>
@@ -56,27 +56,13 @@
 						<div class="replies">Replies/Likes</div>
 					</div>
 					<asp:PlaceHolder ID="ph_table_row" runat="server"></asp:PlaceHolder>
-					<div class="table-row">
-						<div class="status"><i class="fa fa-fire"></i></div>
-						<div class="subjects">
-							<a href="PostDetail.aspx">Something dicussion name.</a>
-							<br />
-							<span>Started by <b><a href="#">User</a></b></span>
-						</div>
-						<div class="replies">
-							2 replies <br />
-							12 likes
-						</div>
-					</div>
 				</div>
-
-				<hr class="subforum-devider" />
 			</div>
 		</div>
 
 		<div class="forum-info">
 			<div class="chart">
-			 Heap Overflow - Stats &nbsp;<i class="fa fa-bar-chart"></i>
+				Heap Overflow - Stats &nbsp;<i class="fa fa-bar-chart"></i>
 			</div>
 			<div>
 				<span><u>5,359</u> Posts in <u>1,246</u> Topics by <u>45,215</u> Users</span>

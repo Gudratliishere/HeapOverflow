@@ -38,7 +38,7 @@
 			<div class="topic-container">
 				<div class="head">
 					<asp:Label ID="lbl_name" runat="server" Text="Post name" CssClass="content"></asp:Label>
-					<asp:Button ID="btn_removePost" runat="server" Text="Remove" CssClass="remove" />
+					<asp:Button ID="btn_removePost" runat="server" Text="Remove" CssClass="remove" OnClick="btn_removePost_Click" />
 				</div>
 
 				<div class="body">

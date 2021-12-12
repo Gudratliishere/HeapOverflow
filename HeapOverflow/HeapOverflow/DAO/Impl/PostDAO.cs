@@ -157,6 +157,99 @@ namespace HeapOverflow.DAO.Impl
             }
         }
 
+        public List<Post> GetPostWhereNameContain(string key)
+        {
+            key = "%" + key + "%";
+            try
+            {
+                string query = "select * from post where name like @key order by post_date desc";
+
+                con.Open();
+                cmd.Parameters.Clear();
+                cmd.CommandText = query;
+                cmd.Parameters.AddWithValue("@key", key);
+
+                var mdr = cmd.ExecuteReader();
+                List<Post> posts = new List<Post>();
+                while (mdr.Read())
+                {
+                    Post post = new Post();
+                    FillPostWithMDR(post, mdr);
+                    posts.Add(post);
+                }
+                con.Close();
+                return posts;
+            }
+            catch (Exception ex)
+            {
+                _log.Log(ex.Message + "\r\n" + ex.StackTrace);
+                con.Close();
+                return null;
+            }
+        }
+
+        public List<Post> GetPostWhereTopicContain(string key)
+        {
+            key = "%" + key + "%";
+            try
+            {
+                string query = "select * from post where topic like @key order by post_date desc";
+
+                con.Open();
+                cmd.Parameters.Clear();
+                cmd.CommandText = query;
+                cmd.Parameters.AddWithValue("@key", key);
+
+                var mdr = cmd.ExecuteReader();
+                List<Post> posts = new List<Post>();
+                while (mdr.Read())
+                {
+                    Post post = new Post();
+                    FillPostWithMDR(post, mdr);
+                    posts.Add(post);
+                }
+                con.Close();
+                return posts;
+            }
+            catch (Exception ex)
+            {
+                _log.Log(ex.Message + "\r\n" + ex.StackTrace);
+                con.Close();
+                return null;
+            }
+        }
+
+        public List<Post> GetPostWhereNameOrTopicContain(string key)
+        {
+            key = "%" + key + "%";
+            try
+            {
+                string query = "select * from post where name or topic like @key order by post_date desc";
+
+                con.Open();
+                cmd.Parameters.Clear();
+                cmd.CommandText = query;
+                cmd.Parameters.AddWithValue("@key", key);
+
+                var mdr = cmd.ExecuteReader();
+                List<Post> posts = new List<Post>();
+                while (mdr.Read())
+                {
+                    Post post = new Post();
+                    FillPostWithMDR(post, mdr);
+                    posts.Add(post);
+                }
+                con.Close();
+                return posts;
+            }
+            catch (Exception ex)
+            {
+                _log.Log(ex.Message + "\r\n" + ex.StackTrace);
+                con.Close();
+                return null;
+            }
+        }
+
         private void FillPostWithMDR(Post post, MySqlDataReader mdr)
         {
             post.Id = Convert.ToInt32(mdr.GetString(mdr.GetOrdinal("id")));

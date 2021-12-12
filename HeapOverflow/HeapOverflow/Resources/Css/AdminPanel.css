@@ -1,0 +1,102 @@
+﻿.hide {
+    display: none;
+}
+
+#tb_search, #btn_search, .btn-filter {
+    height: 30px;
+    border: 0;
+    border-radius: 5px;
+    padding-left: 5px;
+}
+
+#btn_search, .btn-filter {
+    width: 60px;
+}
+
+    #btn_search:hover, .btn-filter:hover, .btn-search:hover {
+        background-color: silver;
+    }
+
+.filter {
+    margin: 10px 0;
+}
+
+.ddl, .btn-search {
+    margin: 5px 5px 5px 0;
+    width: 100px;
+    height: 30px;
+    border: 0;
+    border-radius: 5px;
+}
+
+.btn-edit {
+    font-size: 25px;
+    color: white;
+}
+
+.btn-edit:hover {
+    color: silver;
+}
+
+.users-table{
+    margin-top: 20px;
+}
+
+.table-head {
+    display: flex;
+}
+
+    .table-head div {
+        padding: 5px;
+        margin: 2px;
+        background-color: #2C2C2C;
+        font-weight: bold;
+    }
+
+    .table-head .username {
+        flex: 30%;
+    }
+
+    .table-head .status {
+        flex: 20%;
+    }
+
+    .table-head .role {
+        flex: 25%;
+    }
+
+    .table-head .edit-button {
+        flex: 25%;
+    }
+
+.table-row {
+    display: flex;
+}
+
+    .table-row .username, .table-row .status, .table-row .role, .table-row .btn-edit {
+        padding: 5px;
+        margin: 2px;
+        background-color: #131415;
+    }
+
+    .table-row .username {
+        flex: 30%;
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .table-row .status {
+        flex: 20%;
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .table-row .role {
+        flex: 25%;
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .table-row .btn-edit {
+        flex: 25%;
+    }

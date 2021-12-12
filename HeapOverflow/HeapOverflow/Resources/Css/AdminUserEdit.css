@@ -1,0 +1,14 @@
+﻿.list, #btn_save {
+    width: 120px;
+    height: 30px;
+    border: 0;
+    border-radius: 10px;
+}
+
+#btn_save:hover {
+    background-color: silver;
+}
+
+#lbl_username {
+    font-size: 30px;
+}

@@ -11,6 +11,9 @@ namespace HeapOverflow.DAO.Inter
     {
         List<Post> GetAll();
         List<Post> GetPostByUser(Users user);
+        List<Post> GetPostWhereNameContain(string key);
+        List<Post> GetPostWhereTopicContain(string key);
+        List<Post> GetPostWhereNameOrTopicContain(string key);
         Post GetPostById(int id);
         Post AddPost(Post post);
         Post UpdatePost(Post post);

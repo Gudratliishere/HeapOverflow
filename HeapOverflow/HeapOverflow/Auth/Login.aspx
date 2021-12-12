@@ -45,7 +45,7 @@
 					</div>
 					<asp:Button ID="btn_loginBody" runat="server" Text="Login" CssClass="btn-login-body" OnClick="btn_loginBody_Click"/>
 					<br />
-					<asp:Label ID="lbl_message" runat="server" Text="Something message"></asp:Label>
+					<asp:Label ID="lbl_message" runat="server" Text=""></asp:Label>
 				</div>
 			</center>
 		</div>
