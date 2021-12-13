@@ -81,7 +81,9 @@
     <Content Include="Account\User.aspx" />
     <Content Include="Account\UserEdit.aspx" />
     <Content Include="Auth\Admin.aspx" />
+    <Content Include="Auth\ForgetPassword.aspx" />
     <Content Include="Auth\Login.aspx" />
+    <Content Include="Auth\NewPassword.aspx" />
     <Content Include="Auth\Register.aspx" />
     <Content Include="Home\AdminPanel.aspx" />
     <Content Include="Home\AdminUserEdit.aspx" />
@@ -129,12 +131,27 @@
     <Compile Include="Auth\Admin.aspx.designer.cs">
       <DependentUpon>Admin.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Auth\EmailSender.cs" />
+    <Compile Include="Auth\ForgetPassword.aspx.cs">
+      <DependentUpon>ForgetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Auth\ForgetPassword.aspx.designer.cs">
+      <DependentUpon>ForgetPassword.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Auth\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Auth\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Auth\NewPassword.aspx.cs">
+      <DependentUpon>NewPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Auth\NewPassword.aspx.designer.cs">
+      <DependentUpon>NewPassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="Auth\Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>

@@ -44,6 +44,7 @@
 						<label id="show-hide-pass-label" for="show-hide-pass-input">Show</label>
 					</div>
 					<asp:Button ID="btn_loginBody" runat="server" Text="Login" CssClass="btn-login-body" OnClick="btn_loginBody_Click"/>
+					<a href="ForgetPassword.aspx">Forget password?</a>
 					<br />
 					<asp:Label ID="lbl_message" runat="server" Text=""></asp:Label>
 				</div>

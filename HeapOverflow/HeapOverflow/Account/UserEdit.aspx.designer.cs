@@ -49,6 +49,24 @@ namespace HeapOverflow.Account {
         protected global::System.Web.UI.WebControls.Button btn_logout;
         
         /// <summary>
+        /// img_profilePhoto control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image img_profilePhoto;
+        
+        /// <summary>
+        /// fup_profilePhoto control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload fup_profilePhoto;
+        
+        /// <summary>
         /// tb_name control.
         /// </summary>
         /// <remarks>

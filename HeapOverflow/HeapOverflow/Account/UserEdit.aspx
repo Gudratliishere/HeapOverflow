@@ -35,6 +35,9 @@
 		<div class="container">
 			<center>
 				<div class="login-body">
+					<asp:Image ID="img_profilePhoto" runat="server"></asp:Image>
+					<asp:FileUpload ID="fup_profilePhoto" runat="server"></asp:FileUpload>
+
 					<div class="login-label">Name: </div>
 					<asp:TextBox ID="tb_name" runat="server"></asp:TextBox>
 
@@ -44,7 +47,7 @@
 					<div class="login-label">Description: </div>
 					<asp:TextBox ID="tb_description" TextMode="MultiLine" runat="server"></asp:TextBox>
 
-					<asp:Button ID="btn_save" runat="server" Text="Save" CssClass="btn-login-body" OnClick="btn_save_Click" />
+					<asp:Button ID="btn_save" runat="server" type="button" Text="Save" CssClass="btn-login-body" OnClick="btn_save_Click" />
 					<br />
 
 					<asp:Label ID="lbl_message" runat="server" Text="Something message"></asp:Label>
