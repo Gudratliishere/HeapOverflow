@@ -103,6 +103,33 @@ namespace HeapOverflow.Auth {
         protected global::System.Web.UI.WebControls.Button btn_registerBody;
         
         /// <summary>
+        /// pnl_emailConfirm control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnl_emailConfirm;
+        
+        /// <summary>
+        /// tb_code control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tb_code;
+        
+        /// <summary>
+        /// btn_confirm control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_confirm;
+        
+        /// <summary>
         /// lbl_message control.
         /// </summary>
         /// <remarks>

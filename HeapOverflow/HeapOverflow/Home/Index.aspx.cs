@@ -176,22 +176,49 @@ namespace HeapOverflow.Home
 
         protected void btn_login_Click(object sender, EventArgs e)
         {
-            Response.Redirect("../Auth/Login.aspx");
+            try
+            {
+                Response.Redirect("../Auth/Login.aspx");
+            } catch
+            {
+                Response.Redirect("/Auth/Login.aspx");
+            }
         }
 
         protected void btn_register_Click(object sender, EventArgs e)
         {
-            Response.Redirect("../Auth/Register.aspx");
+            try
+            {
+                Response.Redirect("../Auth/Register.aspx");
+            }
+            catch
+            {
+                Response.Redirect("/Auth/Register.aspx");
+            }
         }
 
         protected void btn_logout_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Logout.aspx");
+            try
+            {
+                Response.Redirect("../Home/Logout.aspx");
+            }
+            catch
+            {
+                Response.Redirect("/Home/Logout.aspx");
+            }
         }
 
         protected void btn_account_Click(object sender, EventArgs e)
         {
-            Response.Redirect("../Account/User.aspx?id=" + Session["user"]);
+            try
+            {
+                Response.Redirect("../Account/User.aspx?id=" + Session["user"]);
+            }
+            catch
+            {
+                Response.Redirect("/Account/User.aspx?id=" + Session["user"]);
+            }
         }
 
         protected void btn_home_Click(object sender, EventArgs e)

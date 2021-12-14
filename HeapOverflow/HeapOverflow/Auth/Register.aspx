@@ -54,6 +54,12 @@
 
 					<asp:Button ID="btn_registerBody" runat="server" Text="Register" CssClass="btn-register-body" OnClick="btn_registerBody_Click" />
 					<br />
+					<asp:Panel ID="pnl_emailConfirm" runat="server" Visible="False">
+						<div class="login-label">Please enter code which was send to your email: </div>
+						<asp:TextBox ID="tb_code" runat="server"></asp:TextBox>
+
+						<asp:Button ID="btn_confirm" runat="server" Text="Confirm" CssClass="btn-register-body" OnClick="btn_confirm_Click" />
+					</asp:Panel>
 
 					<asp:Label ID="lbl_message" runat="server" Text=""></asp:Label>
 				</div>

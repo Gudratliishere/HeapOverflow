@@ -16,6 +16,9 @@ namespace HeapOverflow.Auth
         private IUsersDAO usersDAO = Config.Context.GetUsersDAO();
         private IRoleDAO roleDAO = Config.Context.GetRoleDAO();
 
+        private static EmailSender emailSender;
+        private static UserLogin login;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             CheckAccountButtons();
@@ -52,13 +55,73 @@ namespace HeapOverflow.Auth
 
         protected void btn_registerBody_Click(object sender, EventArgs e)
         {
+            if (!EmptyFieldExists() && CheckPasswordMatch() && !CheckUsernameExists() && !CheckEmailExists())
+            {
+                login = PrepareUserLogin();
+                emailSender = new EmailSender();
+                emailSender.Email = tb_email.Text.Trim();
+                emailSender.SendEmail();
+                pnl_emailConfirm.Visible = true;
+                btn_register.Visible = false;
+            }
+        }
+
+        private UserLogin PrepareUserLogin()
+        {
+            UserLogin login = new UserLogin();
+            login.Username = tb_username.Text.Trim();
+            login.Email = tb_email.Text.Trim();
+            login.Password = Cryption.Encrypt(tb_password.Text);
+            login.Status = 1;
+            login.Role = roleDAO.GetUserRole();
+
+            return login;
+        }
+
+        private bool CheckEmailExists()
+        {
+            if (IsEmailExists())
+            {
+                GiveMessage("User exists with this email!", tb_email);
+                return true;
+            }
+            else
+                ClearMessage(tb_email);
+            return false;
+        }
+
+        private bool CheckUsernameExists()
+        {
+            if (IsUsernameExists())
+            {
+                GiveMessage("This username is already taken, choose another one", tb_username);
+                return true;
+            }
+            else
+                ClearMessage(tb_username);
+            return false;
+        }
+        private bool CheckPasswordMatch()
+        {
+            if (!tb_password.Text.Equals(tb_cpassword.Text))
+            {
+                GiveMessage("Password doesn't match!", tb_cpassword);
+                return false;
+            }
+            else
+                ClearMessage(tb_cpassword);
+
+            return true;
+        }
+
+        private bool EmptyFieldExists()
+        {
             if (tb_username.Text.Trim().Equals(""))
                 GiveMessage("Fill username", tb_username);
             else
             {
-                ClearMessage(tb_username);
                 if (tb_email.Text.Trim().Equals(""))
-                    GiveMessage("Fill email!", tb_email);
+                    GiveMessage("Fill email", tb_email);
                 else
                 {
                     ClearMessage(tb_email);
@@ -67,67 +130,61 @@ namespace HeapOverflow.Auth
                     else
                     {
                         ClearMessage(tb_password);
-                        if (!tb_password.Text.Equals(tb_cpassword.Text))
-                            GiveMessage("Password doesn't match!", tb_cpassword);
-                        else
-                        {
-                            ClearMessage(tb_cpassword);
-
-                            if (IsUsernameExists())
-                                GiveMessage("This username is already taken, choose another one", tb_username);
-                            else
-                            {
-                                ClearMessage(tb_username);
-
-                                if (IsEmailExists())
-                                    GiveMessage("User exists with this email!", tb_email);
-                                else
-                                {
-                                    ClearMessage(tb_email);
-
-                                    UserLogin login = new UserLogin();
-                                    login.Username = tb_username.Text.Trim();
-                                    login.Email = tb_email.Text.Trim();
-                                    login.Password = Cryption.Encrypt(tb_password.Text);
-                                    login.Status = 1;
-                                    login.Role = roleDAO.GetUserRole();
-                                    Users user = new Users();
-                                    user = usersDAO.AddUser(user);
-                                    login.User = user;
-                                    loginDAO.AddUserLogin(login);
-
-                                    Session["user"] = login.Id;
-                                    Response.Redirect("../Account/UserEdit.aspx");
-                                }
-                            }
-                        }
+                        return false;
                     }
                 }
+
             }
+            return true;
         }
 
-        private void GiveMessage (string message, TextBox textBox)
+        private void GiveMessage(string message, TextBox textBox)
         {
             lbl_message.Text = message;
             textBox.BorderColor = System.Drawing.Color.Red;
         }
 
-        private void ClearMessage (TextBox textBox)
+        private void ClearMessage(TextBox textBox)
         {
             lbl_message.Text = string.Empty;
             textBox.BorderColor = System.Drawing.Color.Silver;
         }
 
-        private bool IsUsernameExists ()
+        private bool IsUsernameExists()
         {
             var username = tb_username.Text.Trim();
             return loginDAO.GetUserLoginByUsername(username) != null;
         }
 
-        private bool IsEmailExists ()
+        private bool IsEmailExists()
         {
             var email = tb_email.Text.Trim();
             return loginDAO.GetUserLoginByEmail(email) != null;
+        }
+
+        protected void btn_confirm_Click(object sender, EventArgs e)
+        {
+            if (!tb_code.Text.Trim().Equals(emailSender.Code))
+                lbl_message.Text = "Code is wrong!";
+            else
+            {
+                lbl_message.Text = string.Empty;
+
+                if (DateTime.Now > emailSender.SendTime + TimeSpan.FromMinutes(3))
+                    lbl_message.Text = "Time is over!";
+                else
+                {
+                    Users user = new Users();
+                    usersDAO.AddUser(user);
+                    login.User = user;
+                    loginDAO.AddUserLogin(login);
+
+                    Session["user"] = login.Id;
+                    Response.Redirect("../Account/UserEdit.aspx");
+                }
+            }
+            pnl_emailConfirm.Visible = false;
+            btn_register.Enabled = true;
         }
     }
 }

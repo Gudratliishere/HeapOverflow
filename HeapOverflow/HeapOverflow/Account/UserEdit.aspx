@@ -50,7 +50,7 @@
 					<asp:Button ID="btn_save" runat="server" type="button" Text="Save" CssClass="btn-login-body" OnClick="btn_save_Click" />
 					<br />
 
-					<asp:Label ID="lbl_message" runat="server" Text="Something message"></asp:Label>
+					<asp:Label ID="lbl_message" runat="server" Text=""></asp:Label>
 				</div>
 			</center>
 		</div>
