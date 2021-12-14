@@ -13,26 +13,89 @@ namespace HeapOverflow.Home
 {
     public partial class Index : Page
     {
+        private readonly Logger _log = new Logger("Index.aspx");
+
         private IPostDAO postDAO = Config.Context.GetPostDAO();
         private ICommentDAO commentDAO = Config.Context.GetCommentDAO();
+
+        private static int offset = 0;
+        private static readonly int next = 10;
+
+        private string searchKey;
+        private string searchMethod;
 
         protected void Page_Load(object sender, EventArgs e)
         {
             CheckAccountButtons();
-            FillPosts(postDAO.GetAll());
+            DefinePagination();
+            FillPosts();
+        }
+
+        private void FillPosts()
+        {
+            var search = Request.Params["search"];
+            if (search != null)
+            {
+                var method = Request.Params["method"];
+                if (method != null)
+                {
+                    searchKey = search;
+                    searchMethod = method;
+                    if (method == "everything")
+                        FillPosts(postDAO.GetPostWhereNameOrTopicContain(search, offset, next));
+                    else if (method == "title")
+                        FillPosts(postDAO.GetPostWhereNameContain(search, offset, next));
+                    else if (method == "topic")
+                        FillPosts(postDAO.GetPostWhereTopicContain(search, offset, next));
+                }
+            }
+            else
+                FillPosts(postDAO.GetAllByPagination(offset, next));
+        }
+
+        private void DefinePagination()
+        {
+            var parse = int.TryParse(Request.Params["page"], out int page);
+            offset = (parse) ? page * 10 : 0;
+
+            int pages = postDAO.GetSize() / 10 + 1;
+            for (int i = 0; i < pages; i++)
+                CreatePageButton(i);
+        }
+
+        private void CreatePageButton(int page)
+        {
+            Button button = new Button();
+            button.ID = "btn_page" + page;
+            button.Text = (page + 1).ToString();
+            button.CssClass = "btn-page";
+            button.Click += delegate (object sender, EventArgs e)
+            {
+                if (searchKey != null && searchMethod != null)
+                    Response.Redirect("Index.aspx?search=" + searchKey + "&method=" + searchMethod + "&page=" + page);
+                else
+                    Response.Redirect("Index.aspx?page=" + page);
+            };
+            ph_pagination.Controls.Add(button);
         }
 
         private void FillPosts(List<Post> posts)
         {
-            ph_table_row.Controls.Clear();
-            posts.ForEach((post) =>
+            try
             {
-                var table_row = GetDivTableRow(post);
-                ph_table_row.Controls.Add(table_row);
-            });
+                ph_table_row.Controls.Clear();
+                posts.ForEach((post) =>
+                {
+                    var table_row = GetDivTableRow(post);
+                    ph_table_row.Controls.Add(table_row);
+                });
+            } catch (Exception ex)
+            {
+                _log.Log(ex.Message + "\r\n" + ex.StackTrace);
+            }
         }
 
-        private HtmlGenericControl GetDivTableRow (Post post)
+        private HtmlGenericControl GetDivTableRow(Post post)
         {
             HtmlGenericControl table_row = new HtmlGenericControl("div");
             table_row.Attributes.Add("class", "table-row");
@@ -43,14 +106,14 @@ namespace HeapOverflow.Home
             return table_row;
         }
 
-        private HtmlGenericControl GetDevider ()
+        private HtmlGenericControl GetDevider()
         {
             HtmlGenericControl devider = new HtmlGenericControl("hr");
             devider.Attributes.Add("class", "subforum-devider");
             return devider;
         }
 
-        private HtmlGenericControl GetDivReplies (Post post)
+        private HtmlGenericControl GetDivReplies(Post post)
         {
             HtmlGenericControl span = new HtmlGenericControl("span");
             span.InnerHtml = commentDAO.GetCommentsByPost(post).Count.ToString() + " replies\n" + post.LikeCount + " likes";
@@ -61,7 +124,7 @@ namespace HeapOverflow.Home
             return replies;
         }
 
-        private HtmlGenericControl GetDivSubject (Post post)
+        private HtmlGenericControl GetDivSubject(Post post)
         {
             HtmlGenericControl a = new HtmlGenericControl("a");
             a.Attributes.Add("href", "PostDetail.aspx?id=" + post.Id);
@@ -84,7 +147,7 @@ namespace HeapOverflow.Home
             return div_subject;
         }
 
-        private HtmlGenericControl GetDivStatus ()
+        private HtmlGenericControl GetDivStatus()
         {
             HtmlGenericControl div_status = new HtmlGenericControl("div");
             div_status.Attributes.Add("class", "status");
@@ -101,7 +164,8 @@ namespace HeapOverflow.Home
                 btn_register.Visible = true;
                 btn_logout.Visible = false;
                 btn_account.Visible = false;
-            } else
+            }
+            else
             {
                 btn_login.Visible = false;
                 btn_register.Visible = false;
@@ -144,11 +208,11 @@ namespace HeapOverflow.Home
         {
             var key = tb_search.Text.Trim();
             if (ddl_filter.SelectedIndex == 0)
-                FillPosts(postDAO.GetPostWhereNameOrTopicContain(key));
+                Response.Redirect("Index.aspx?search=" + key + "&method=everything");
             else if (ddl_filter.SelectedIndex == 1)
-                FillPosts(postDAO.GetPostWhereNameContain(key));
+                Response.Redirect("Index.aspx?search=" + key + "&method=title");
             else if (ddl_filter.SelectedIndex == 2)
-                FillPosts(postDAO.GetPostWhereTopicContain(key));
+                Response.Redirect("Index.aspx?search=" + key + "&method=topic");
         }
     }
 }

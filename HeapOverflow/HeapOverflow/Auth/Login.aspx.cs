@@ -1,5 +1,6 @@
 ﻿using HeapOverflow.Config;
 using HeapOverflow.DAO.Inter;
+using HeapOverflow.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -59,16 +60,30 @@ namespace HeapOverflow.Auth
             else
             {
                 ClearMessage(tb_username);
+                CheckPassword(login);
+            }
+        }
 
-                if (!login.Password.Equals(Cryption.Encrypt(tb_password.Text)))
-                    GiveMessage("Password is wrong", tb_password);
-                else
-                {
-                    ClearMessage(tb_password);
+        private void CheckPassword (UserLogin login)
+        {
+            if (!login.Password.Equals(Cryption.Encrypt(tb_password.Text)))
+                GiveMessage("Password is wrong", tb_password);
+            else
+            {
+                ClearMessage(tb_password);
+                CheckBanned(login);
+            }
+        }
 
-                    Session["user"] = login.Id;
-                    Response.Redirect("../Home/Index.aspx");
-                }
+        private void CheckBanned (UserLogin login)
+        {
+            if (login.Status == 0)
+                GiveMessage("Account is banned!", tb_username);
+            else
+            {
+                ClearMessage(tb_username);
+                Session["user"] = login.Id;
+                Response.Redirect("../Home/Index.aspx");
             }
         }
 

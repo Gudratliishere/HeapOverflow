@@ -282,7 +282,7 @@ namespace HeapOverflow.DAO.Impl
             login.Username = mdr.GetString(mdr.GetOrdinal("username"));
             login.Email = mdr.GetString(mdr.GetOrdinal("email"));
             login.Password = mdr.GetString(mdr.GetOrdinal("password"));
-            login.Status = Convert.ToInt32(mdr.GetString(mdr.GetOrdinal("role")));
+            login.Status = Convert.ToInt32(mdr.GetString(mdr.GetOrdinal("status")));
 
             int roleId, userId;
             if (!int.TryParse(mdr.GetString(mdr.GetOrdinal("role")), out roleId))

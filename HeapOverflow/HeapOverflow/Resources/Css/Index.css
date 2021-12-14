@@ -189,17 +189,16 @@ header {
         padding: 10px;
     }
 
-    .search-box button {
+    .search-box input[type=submit] {
         padding: 10px;
         background-color: #fff;
         color: #000000;
     }
 
-        .search-box button:hover {
-            background-color: #000000;
-            color: #fff;
-            box-shadow: 1px 2px 3px #fff;
-        }
+    .search-box input[type=submit]:hover {
+        background-color: silver;
+        box-shadow: 1px 2px 3px #fff;
+    }
 
 .forum-info {
     padding: 20px;
@@ -345,3 +344,14 @@ footer {
 #btn_search:focus {
     background-color: silver;
 }
+
+.btn-page {
+    background-color: transparent;
+    border: solid 1px white;
+    color: white;
+}
+
+    .btn-page:hover {
+        border: solid 1px silver;
+        color: silver;
+    }

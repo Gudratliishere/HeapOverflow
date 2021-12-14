@@ -12,8 +12,8 @@ namespace HeapOverflow.Auth
     public partial class EmailConfirmation : System.Web.UI.Page
     {
         private IUserLoginDAO loginDAO = Config.Context.GetUserLoginDAO();
-        private UserLogin login;
-        private EmailSender emailSender;
+        private static UserLogin login;
+        private static EmailSender emailSender;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -50,6 +50,7 @@ namespace HeapOverflow.Auth
             emailSender.SendEmail();
             pnl_confirm.Visible = true;
             pnl_confirm.Enabled = true;
+            btn_send.Enabled = false;
         }
 
         protected void btn_confirm_Click(object sender, EventArgs e)
@@ -68,6 +69,7 @@ namespace HeapOverflow.Auth
                     Response.Redirect("NewPassword.aspx");
                 }
             }
+            btn_send.Enabled = true;
         }
 
         protected void btn_home_Click(object sender, EventArgs e)

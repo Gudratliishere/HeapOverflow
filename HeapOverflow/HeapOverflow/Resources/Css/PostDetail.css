@@ -21,6 +21,18 @@
     margin: 5px;
 }
 
+.username {
+    background-color: transparent;
+    border: 0;
+    color: rgb(241, 122, 29);
+    padding-left: 0;
+    margin-bottom: 5px;
+}
+
+.username:hover {
+    color: #bb6f25;
+}
+
 .body .authors .username{
     font-size: 20px;
 }
@@ -47,11 +59,18 @@
     margin: 10px 0;
 }
 
-#lbl_usernameComment     {
+.btn_usernameComment{
+    background-color: transparent;
+    color: #ff9c31;
+    border: 0;
     font-size: 17px;
 }
 
-#lbl_comment {
+.btn_usernameComment:hover{
+    color: #ba772f;
+}
+
+.lbl_comment {
     font-size: 14px;
 }
 

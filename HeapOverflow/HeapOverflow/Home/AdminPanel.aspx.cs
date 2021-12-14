@@ -86,7 +86,11 @@ namespace HeapOverflow.Home
 
         protected void btn_search_Click(object sender, EventArgs e)
         {
-            FillUsers(new List<UserLogin> { loginDAO.GetUserLoginByUsername(tb_search.Text.Trim()) });
+            var login = loginDAO.GetUserLoginByUsername(tb_search.Text.Trim());
+            if (login != null)
+                FillUsers(new List<UserLogin> { login });
+            else
+                FillUsers(loginDAO.GetAll());
         }
 
         protected void btn_searchByStatus_Click(object sender, EventArgs e)

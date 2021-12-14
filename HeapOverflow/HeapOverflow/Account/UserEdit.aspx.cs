@@ -18,6 +18,8 @@ namespace HeapOverflow.Account
         private Users user;
         private int loginId;
 
+        private static bool allowLoad = true;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["user"] == null)
@@ -32,11 +34,12 @@ namespace HeapOverflow.Account
             if (parse)
             {
                 user = loginDAO.GetUserLoginById(loginId).User;
-                if (user != null)
+                if (user != null && allowLoad)
                 {
                     tb_name.Text = user.Name;
                     tb_surname.Text = user.Surname;
                     tb_description.Text = user.Description;
+                    allowLoad = false;
                 }
             }
         }
@@ -64,6 +67,7 @@ namespace HeapOverflow.Account
                 user.Surname = tb_surname.Text.Trim();
                 user.Description = tb_description.Text.Trim();
                 usersDAO.UpdateUser(user);
+                allowLoad = true;
                 Response.Redirect("User.aspx?id=" + loginId);
             }
         }

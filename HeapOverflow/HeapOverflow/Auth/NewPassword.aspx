@@ -31,8 +31,8 @@
 			<center>
 				<div class="login-body">
 						<div class="login-label">Please enter new Password:</div>
-						<asp:TextBox ID="tb_password" runat="server"></asp:TextBox>
-						<asp:TextBox ID="tb_cpassword" runat="server"></asp:TextBox>
+						<asp:TextBox ID="tb_password" runat="server" TextMode="Password"></asp:TextBox>
+						<asp:TextBox ID="tb_cpassword" runat="server" TextMode="Password"></asp:TextBox>
 
 					<div>
 						<input type="checkbox" onclick="showHidePassword()" id="show-hide-pass-input" />
@@ -53,10 +53,6 @@
 			<div>
 				<span><u>5,359</u> Posts in <u>1,246</u> Topics by <u>45,215</u> Users</span>
 			</div>
-		</div>
-
-		<div class="pagination">
-			pages: <a href="#">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a>
 		</div>
 
 		<footer>

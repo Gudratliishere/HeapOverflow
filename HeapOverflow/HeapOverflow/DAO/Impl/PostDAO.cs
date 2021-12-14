@@ -157,17 +157,19 @@ namespace HeapOverflow.DAO.Impl
             }
         }
 
-        public List<Post> GetPostWhereNameContain(string key)
+        public List<Post> GetPostWhereNameContain(string key, int offset, int next)
         {
             key = "%" + key + "%";
             try
             {
-                string query = "select * from post where name like @key order by post_date desc";
+                string query = "select * from post where name like @key order by post_date desc limit @offset, @next";
 
                 con.Open();
                 cmd.Parameters.Clear();
                 cmd.CommandText = query;
                 cmd.Parameters.AddWithValue("@key", key);
+                cmd.Parameters.AddWithValue("@offset", offset);
+                cmd.Parameters.AddWithValue("@next", next);
 
                 var mdr = cmd.ExecuteReader();
                 List<Post> posts = new List<Post>();
@@ -188,17 +190,19 @@ namespace HeapOverflow.DAO.Impl
             }
         }
 
-        public List<Post> GetPostWhereTopicContain(string key)
+        public List<Post> GetPostWhereTopicContain(string key, int offset, int next)
         {
             key = "%" + key + "%";
             try
             {
-                string query = "select * from post where topic like @key order by post_date desc";
+                string query = "select * from post where topic like @key order by post_date desc limit @offset, @next";
 
                 con.Open();
                 cmd.Parameters.Clear();
                 cmd.CommandText = query;
                 cmd.Parameters.AddWithValue("@key", key);
+                cmd.Parameters.AddWithValue("@offset", offset);
+                cmd.Parameters.AddWithValue("@next", next);
 
                 var mdr = cmd.ExecuteReader();
                 List<Post> posts = new List<Post>();
@@ -219,17 +223,50 @@ namespace HeapOverflow.DAO.Impl
             }
         }
 
-        public List<Post> GetPostWhereNameOrTopicContain(string key)
+        public List<Post> GetPostWhereNameOrTopicContain(string key, int offset, int next)
         {
             key = "%" + key + "%";
             try
             {
-                string query = "select * from post where name or topic like @key order by post_date desc";
+                string query = "select * from post where name or topic like @key order by post_date desc limit @offset, @next";
 
                 con.Open();
                 cmd.Parameters.Clear();
                 cmd.CommandText = query;
                 cmd.Parameters.AddWithValue("@key", key);
+                cmd.Parameters.AddWithValue("@offset", offset);
+                cmd.Parameters.AddWithValue("@next", next);
+
+                var mdr = cmd.ExecuteReader();
+                List<Post> posts = new List<Post>();
+                while (mdr.Read())
+                {
+                    Post post = new Post();
+                    FillPostWithMDR(post, mdr);
+                    posts.Add(post);
+                }
+                con.Close();
+                return posts;
+            }
+            catch (Exception ex)
+            {
+                _log.Log(ex.Message + "\r\n" + ex.StackTrace);
+                con.Close();
+                return null;
+            }
+        }
+
+        public List<Post> GetAllByPagination(int offset, int next)
+        {
+            try
+            {
+                string query = "select * from post order by post_date desc limit @offset, @next";
+
+                con.Open();
+                cmd.Parameters.Clear();
+                cmd.CommandText = query;
+                cmd.Parameters.AddWithValue("@offset", offset);
+                cmd.Parameters.AddWithValue("@next", next);
 
                 var mdr = cmd.ExecuteReader();
                 List<Post> posts = new List<Post>();
@@ -314,6 +351,28 @@ namespace HeapOverflow.DAO.Impl
                 _log.Log(ex.Message + "\r\n" + ex.StackTrace);
                 con.Close();
                 return null;
+            }
+        }
+
+        public int GetSize()
+        {
+            try
+            {
+                string query = "select count(id) from post";
+
+                con.Open();
+                cmd.Parameters.Clear();
+                cmd.CommandText = query;
+
+                int size = Convert.ToInt32(cmd.ExecuteScalar());
+                con.Close();
+                return size;
+            }
+            catch (Exception ex)
+            {
+                _log.Log(ex.Message + "\r\n" + ex.StackTrace);
+                con.Close();
+                return 0;
             }
         }
     }

@@ -21,7 +21,7 @@ namespace HeapOverflow.Auth
         private DateTime sendTime;
 
         public string Email { set => email = value; }
-        public string Code { get; }
+        public string Code { get => code; }
         public DateTime SendTime { get => sendTime; }
 
         public EmailSender ()

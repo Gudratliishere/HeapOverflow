@@ -43,12 +43,12 @@
 
 				<div class="body">
 					<div class="authors">
-						<asp:Label ID="lbl_username" runat="server" Text="Username" CssClass="username"></asp:Label>
+						<asp:Button ID="btn_username" runat="server" Text="Username" CssClass="username" OnClick="btn_username_Click" />
 						<br />
 						<asp:Label ID="lbl_topic" runat="server" Text="Topic" CssClass="content"></asp:Label>
 						<div class="like-dislike">
-							<asp:Button ID="btn_postLike" runat="server" Text="Like (8)" CssClass="like" OnClick="btn_postLike_Click"/>
-							<asp:Button ID="btn_postDislike" runat="server" Text="Dislike (3)"  CssClass="dislike" OnClick="btn_postDislike_Click"/>
+							<asp:Button ID="btn_postLike" runat="server" Text="Like (8)" CssClass="like" OnClick="btn_postLike_Click" />
+							<asp:Button ID="btn_postDislike" runat="server" Text="Dislike (3)" CssClass="dislike" OnClick="btn_postDislike_Click" />
 						</div>
 					</div>
 				</div>
@@ -70,10 +70,6 @@
 			<div>
 				<span><u>5,359</u> Posts in <u>1,246</u> Topics by <u>45,215</u> Users</span>
 			</div>
-		</div>
-
-		<div class="pagination">
-			pages: <a href="#">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a>
 		</div>
 
 		<footer>

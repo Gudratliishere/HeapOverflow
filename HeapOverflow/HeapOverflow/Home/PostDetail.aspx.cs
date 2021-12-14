@@ -34,20 +34,35 @@ namespace HeapOverflow.Home
                 List<Comment> comments = commentDAO.GetCommentsByPost(post);
                 comments.ForEach((comment) =>
                 {
-                    Label lbl_username = new Label();
-                    lbl_username.ID = "lbl_usernameComment";
-                    lbl_username.Text = comment.User.Username + ": ";
-                    Label lbl_topic = new Label();
-                    lbl_topic.ID = "lbl_comment";
-                    lbl_topic.Text = comment.Topic;
-
                     HtmlGenericControl control = new HtmlGenericControl("div");
                     control.Attributes.Add("class", "comment-item");
-                    control.Controls.Add(lbl_username);
-                    control.Controls.Add(lbl_topic);
+                    control.Controls.Add(GetCommentUsernameButton(comment));
+                    control.Controls.Add(GetCommentTopicLabel(comment));
                     ph_comment_item.Controls.Add(control);
                 });
             }
+        }
+
+        private Label GetCommentTopicLabel (Comment comment)
+        {
+            Label lbl_topic = new Label();
+            lbl_topic.ID = "lbl_comment" + comment.Id;
+            lbl_topic.CssClass = "lbl_comment";
+            lbl_topic.Text = comment.Topic;
+            return lbl_topic;
+        }
+
+        private Button GetCommentUsernameButton (Comment comment)
+        {
+            Button button = new Button();
+            button.ID = "btn_usernameComment" + comment.Id;
+            button.CssClass = "btn_usernameComment";
+            button.Text = comment.User.Username + ": ";
+            button.Click += delegate (object sender, EventArgs e)
+            {
+                Response.Redirect("../Account/User.aspx?id=" + comment.User.Id);
+            };
+            return button;
         }
 
         private void FillPostInformation()
@@ -61,7 +76,7 @@ namespace HeapOverflow.Home
                 {
                     lbl_name.Text = post.Name;
                     lbl_topic.Text = post.Topic;
-                    lbl_username.Text = post.User.Username;
+                    btn_username.Text = post.User.Username;
                 }
             }
         }
@@ -164,6 +179,11 @@ namespace HeapOverflow.Home
         protected void btn_removePost_Click(object sender, EventArgs e)
         {
             Response.Redirect("RemovePost.aspx?id=" + post.Id);
+        }
+
+        protected void btn_username_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("../Account/User.aspx?id=" + post.User.Id);
         }
     }
 }

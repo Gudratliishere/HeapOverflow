@@ -9,11 +9,13 @@ namespace HeapOverflow.DAO.Inter
 {
     public interface IPostDAO
     {
+        int GetSize();
         List<Post> GetAll();
+        List<Post> GetAllByPagination(int offset, int next);
         List<Post> GetPostByUser(Users user);
-        List<Post> GetPostWhereNameContain(string key);
-        List<Post> GetPostWhereTopicContain(string key);
-        List<Post> GetPostWhereNameOrTopicContain(string key);
+        List<Post> GetPostWhereNameContain(string key, int offset, int next);
+        List<Post> GetPostWhereTopicContain(string key, int offset, int next);
+        List<Post> GetPostWhereNameOrTopicContain(string key, int offset, int next);
         Post GetPostById(int id);
         Post AddPost(Post post);
         Post UpdatePost(Post post);

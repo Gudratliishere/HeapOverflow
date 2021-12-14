@@ -15,6 +15,8 @@ namespace HeapOverflow.Home
         private IRoleDAO roleDAO = Config.Context.GetRoleDAO();
         private UserLogin login;
 
+        private static bool allowLoad = true;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["admin"] == null)
@@ -29,11 +31,12 @@ namespace HeapOverflow.Home
             if (parse)
             {
                 login = loginDAO.GetUserLoginById(id);
-                if (login != null)
+                if (login != null && allowLoad)
                 {
                     lbl_username.Text = login.Username + ": ";
                     ddl_status.SelectedValue = login.Status.ToString();
                     ddl_role.SelectedValue = login.Role.Name;
+                    allowLoad = false;
                 }
             }
         }
@@ -45,6 +48,7 @@ namespace HeapOverflow.Home
                 login.Status = int.Parse(ddl_status.SelectedValue);
                 login.Role = (ddl_role.SelectedIndex == 0) ? roleDAO.GetUserRole() : roleDAO.GetModeratorRole();
                 loginDAO.UpdateUserLogin(login);
+                allowLoad = true;
                 Response.Redirect("AdminPanel.aspx");
             }
         }

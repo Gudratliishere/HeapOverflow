@@ -60,6 +60,10 @@
 			</div>
 		</div>
 
+		<div class="pagination">
+			pages: <asp:PlaceHolder ID="ph_pagination" runat="server"></asp:PlaceHolder>
+		</div>
+
 		<div class="forum-info">
 			<div class="chart">
 				Heap Overflow - Stats &nbsp;<i class="fa fa-bar-chart"></i>
@@ -67,10 +71,6 @@
 			<div>
 				<span><u>5,359</u> Posts in <u>1,246</u> Topics by <u>45,215</u> Users</span>
 			</div>
-		</div>
-
-		<div class="pagination">
-			pages: <a href="#">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a>
 		</div>
 
 		<footer>
