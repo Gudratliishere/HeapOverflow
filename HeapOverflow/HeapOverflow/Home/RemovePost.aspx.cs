@@ -1,4 +1,5 @@
 ﻿using HeapOverflow.DAO.Inter;
+using HeapOverflow.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,7 @@ namespace HeapOverflow.Home
     {
         private IPostDAO postDAO = Config.Context.GetPostDAO();
         private ICommentDAO commentDAO = Config.Context.GetCommentDAO();
+        private IUsersDAO usersDAO = Config.Context.GetUsersDAO();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -27,8 +29,12 @@ namespace HeapOverflow.Home
                 var post = postDAO.GetPostById(id);
                 if (post != null)
                 {
+                    var user = post.User.User;
+                    user.Post--;
+                    usersDAO.UpdateUser(user);
+
                     var comments = commentDAO.GetCommentsByPost(post);
-                    comments.ForEach((comment) => commentDAO.RemoveComment(comment));
+                    comments.ForEach((comment) => commentDAO.RemoveComment(comment.Id));
                     postDAO.RemovePost(post);
                     Response.Redirect("Index.aspx");
                 }

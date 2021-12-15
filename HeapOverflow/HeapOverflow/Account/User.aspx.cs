@@ -1,4 +1,5 @@
-﻿using HeapOverflow.DAO.Inter;
+﻿using HeapOverflow.Config;
+using HeapOverflow.DAO.Inter;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -39,8 +40,10 @@ namespace HeapOverflow.Account
                     lbl_name.Text = user.Name;
                     lbl_surname.Text = user.Surname;
                     lbl_description.Text = user.Description;
+                    if (user.Photo.Length != 0)
+                        img_profile.ImageUrl = "data:image;base64," + Convert.ToBase64String(user.Photo);
+
                     lbl_post.Text = "Post: " + user.Post;
-                    lbl_star.Text = "Star: " + user.Star;
                     CheckForEdit(id);
                 }
             }
@@ -67,6 +70,11 @@ namespace HeapOverflow.Account
         protected void btn_edit_Click(object sender, EventArgs e)
         {
             Response.Redirect("UserEdit.aspx");
+        }
+
+        protected void btn_account_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("User.aspx?id=" + Session["user"]);
         }
     }
 }

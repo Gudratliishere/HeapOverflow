@@ -21,7 +21,7 @@
 							<asp:Button ID="btn_home" runat="server" Text="Home" OnClick="btn_home_Click" />
 						</li>
 						<li class="nav-item">
-							<asp:Button ID="btn_account" runat="server" Text="Account" />
+							<asp:Button ID="btn_account" runat="server" Text="Account" OnClick="btn_account_Click" />
 						</li>
 					</ul>
 				</nav>
@@ -38,8 +38,6 @@
 					<asp:Button ID="btn_edit" runat="server" Text="Edit" OnClick="btn_edit_Click"/>
 				</div>
 				<asp:Label ID="lbl_post" runat="server" Text="Post: 10"></asp:Label>
-				<br />
-				<asp:Label ID="lbl_star" runat="server" Text="Star: 45"></asp:Label>
 				<p>
 					<span>Description:</span>
 					<br />

@@ -16,15 +16,40 @@ namespace HeapOverflow.Home
         private IRoleDAO roleDAO = Config.Context.GetRoleDAO();
         private IPostDAO postDAO = Config.Context.GetPostDAO();
         private ICommentDAO commentDAO = Config.Context.GetCommentDAO();
+        private IVotesDAO votesDAO = Config.Context.GetVotesDAO();
 
         private Post post;
+        private UserLogin login;
+        private Votes vote;
 
         protected void Page_Load(object sender, EventArgs e)
         {
             CheckAccountButtons();
-            CheckRemoveButton();
             FillPostInformation();
+            CheckRemoveButton();
             FillComments();
+            LoadVotes();
+        }
+
+        private void LoadVotes()
+        {
+            btn_postLike.Text = string.Format("Like ({0})", votesDAO.GetLikesCountByPost(post));
+            btn_postDislike.Text = string.Format("Dislike ({0})", votesDAO.GetDislikesCountByPost(post));
+
+            vote = votesDAO.GetVote(login, post);
+            if (vote != null)
+            {
+                if (vote.Vote == 1)
+                {
+                    btn_postLike.Style.Add("background-color", "blue");
+                    btn_postDislike.Style.Add("background-color", "#2C2C2C");
+                }
+                else
+                {
+                    btn_postLike.Style.Add("background-color", "#2C2C2C");
+                    btn_postDislike.Style.Add("background-color", "blue");
+                }
+            }
         }
 
         private void FillComments()
@@ -38,9 +63,33 @@ namespace HeapOverflow.Home
                     control.Attributes.Add("class", "comment-item");
                     control.Controls.Add(GetCommentUsernameButton(comment));
                     control.Controls.Add(GetCommentTopicLabel(comment));
+                    control.Controls.Add(GetRemoveButton(comment));
+                    control.Controls.Add(GetDevider());
                     ph_comment_item.Controls.Add(control);
                 });
             }
+        }
+
+        private Button GetRemoveButton (Comment comment)
+        {
+            Button button = new Button();
+            button.CssClass = "remove";
+            button.ID = "btn_removeComment" + comment.Id;
+            button.Visible = login != null && (login.Role.Name.Equals("MODERATOR") || post.User.Id == post.Id);
+            button.Text = "Remove";
+            button.Click += delegate (object sender, EventArgs e)
+            {
+                Response.Redirect("RemoveComment.aspx?commentId=" + comment.Id + "&postId=" + post.Id);
+            };
+            return button;
+        }
+
+        private HtmlGenericControl GetDevider ()
+        {
+            HtmlGenericControl hr = new HtmlGenericControl("hr");
+            hr.Attributes.Add("class", "subforum-devider");
+
+            return hr;
         }
 
         private Label GetCommentTopicLabel (Comment comment)
@@ -87,11 +136,10 @@ namespace HeapOverflow.Home
                 btn_removePost.Visible = false;
             else
             {
-                int id;
-                var parse = int.TryParse(Session["user"].ToString(), out id);
+                var parse = int.TryParse(Session["user"].ToString(), out int id);
                 if (parse)
                 {
-                    var login = loginDAO.GetUserLoginById(id);
+                    login = loginDAO.GetUserLoginById(id);
                     if (login != null)
                     {
                         if (login.Role == roleDAO.GetUserRole())
@@ -99,6 +147,9 @@ namespace HeapOverflow.Home
                         else
                             btn_removePost.Visible = true;
                     }
+                    if (post.User.Id == id)
+                        btn_removePost.Visible = true;
+
                 }
             }
         }
@@ -150,12 +201,74 @@ namespace HeapOverflow.Home
         {
             if (Session["user"] == null)
                 Response.Redirect("../Auth/Login.aspx");
+
+            if (vote != null)
+            {
+                if (vote.Vote == 1)
+                    ClearLikeVote();
+                else
+                    ChangeDislikeToLike();
+            }
+            else
+                GiveVote(1);
+
+            Response.Redirect("PostDetail.aspx?id=" + post.Id);
+
+        }
+
+        private void ChangeDislikeToLike()
+        {
+            btn_postLike.Style.Add("background-color", "blue");
+            btn_postDislike.Style.Add("background-color", "#2C2C2C");
+            vote.Vote = 1;
+            votesDAO.UpdateVote(vote);
+        }
+
+        private void ClearLikeVote()
+        {
+            btn_postLike.Style.Add("background-color", "#2C2C2C");
+            votesDAO.RemoveVote(vote);
+        }
+
+        private void GiveVote (int vote)
+        {
+            Votes newVote = new Votes();
+            newVote.Post = post;
+            newVote.User = login;
+            newVote.Vote = vote;
+            votesDAO.AddVote(newVote);
         }
 
         protected void btn_postDislike_Click(object sender, EventArgs e)
         {
             if (Session["user"] == null)
                 Response.Redirect("../Auth/Login.aspx");
+
+            if (vote != null)
+            {
+                if (vote.Vote == 0)
+                    ClearDislikeVote();
+                else
+                    ChangeLikeToDislike();
+            }
+            else
+                GiveVote(0);
+
+            Response.Redirect("PostDetail.aspx?id=" + post.Id);
+        }
+
+        private void ChangeLikeToDislike()
+        {
+            btn_postDislike.Style.Add("background-color", "blue");
+            btn_postLike.Style.Add("background-color", "#2C2C2C");
+            vote.Vote = 0;
+            votesDAO.UpdateVote(vote);
+        }
+
+        private void ClearDislikeVote()
+        {
+            btn_postDislike.Style.Add("background-color", "#2C2C2C");
+            votesDAO.RemoveVote(vote);
         }
 
         protected void btn_postComment_Click(object sender, EventArgs e)

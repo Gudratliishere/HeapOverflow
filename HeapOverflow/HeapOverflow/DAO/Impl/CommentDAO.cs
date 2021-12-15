@@ -40,8 +40,7 @@ namespace HeapOverflow.DAO.Impl
         {
             try
             {
-                string query = "insert into comment (user, post, topic, like_count, dislike_count, post_date) values (@user, @post, @topic, @like_count," +
-                    " @dislike_count, @post_date); select LAST_INSERT_ID()";
+                string query = "insert into comment (user, post, topic, post_date) values (@user, @post, @topic, @post_date); select LAST_INSERT_ID()";
 
                 con.Open();
                 cmd.Parameters.Clear();
@@ -49,8 +48,6 @@ namespace HeapOverflow.DAO.Impl
                 cmd.Parameters.AddWithValue("@user", comment.User.Id);
                 cmd.Parameters.AddWithValue("@post", comment.Post.Id);
                 cmd.Parameters.AddWithValue("@topic", comment.Topic);
-                cmd.Parameters.AddWithValue("@like_count", comment.LikeCount);
-                cmd.Parameters.AddWithValue("@dislike_count", comment.DislikeCount);
                 cmd.Parameters.AddWithValue("@post_date", comment.PostDate);
 
                 int id = Convert.ToInt32(cmd.ExecuteScalar());
@@ -104,8 +101,6 @@ namespace HeapOverflow.DAO.Impl
         private void FillCommentWithMDR(Comment comment, MySqlDataReader mdr)
         {
             comment.Id = Convert.ToInt32(mdr.GetString(mdr.GetOrdinal("id")));
-            comment.LikeCount = Convert.ToInt32(mdr.GetString(mdr.GetOrdinal("like_count")));
-            comment.DislikeCount = Convert.ToInt32(mdr.GetString(mdr.GetOrdinal("dislike_count")));
             comment.Topic = mdr.GetString(mdr.GetOrdinal("topic"));
 
             int userId = Convert.ToInt32(mdr.GetString(mdr.GetOrdinal("user")));
@@ -115,7 +110,7 @@ namespace HeapOverflow.DAO.Impl
             comment.Post = postDAO.GetPostById(postId);
         }
 
-        public Comment RemoveComment(Comment comment)
+        public void RemoveComment(int id)
         {
             try
             {
@@ -124,18 +119,16 @@ namespace HeapOverflow.DAO.Impl
                 con.Open();
                 cmd.Parameters.Clear();
                 cmd.CommandText = query;
-                cmd.Parameters.AddWithValue("@id", comment.Id);
+                cmd.Parameters.AddWithValue("@id", id);
 
                 if (cmd.ExecuteNonQuery() == 0)
-                    throw new Exception("Error occured while deleting data with this id: " + comment.Id);
+                    throw new Exception("Error occured while deleting data with this id: " + id);
                 con.Close();
-                return comment;
             }
             catch (Exception ex)
             {
                 _log.Log(ex.Message + "\r\n" + ex.StackTrace);
                 con.Close();
-                return null;
             }
         }
 
@@ -143,8 +136,7 @@ namespace HeapOverflow.DAO.Impl
         {
             try
             {
-                string query = "update comment set user = @user, post = @post, topic = @topic, like_count = @like_count, dislike_count = @dislike_count " +
-                    "post_date = @post_date where id = @id";
+                string query = "update comment set user = @user, post = @post, topic = @topic, post_date = @post_date where id = @id";
 
                 con.Open();
                 cmd.Parameters.Clear();
@@ -153,8 +145,6 @@ namespace HeapOverflow.DAO.Impl
                 cmd.Parameters.AddWithValue("@user", comment.User.Id);
                 cmd.Parameters.AddWithValue("@post", comment.Post.Id);
                 cmd.Parameters.AddWithValue("@topic", comment.Topic);
-                cmd.Parameters.AddWithValue("@like_count", comment.LikeCount);
-                cmd.Parameters.AddWithValue("@dislike_count", comment.DislikeCount);
                 cmd.Parameters.AddWithValue("@post_date", comment.PostDate);
 
                 if (cmd.ExecuteNonQuery() == 0)

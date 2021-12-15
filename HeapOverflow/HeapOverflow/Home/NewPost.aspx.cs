@@ -13,6 +13,7 @@ namespace HeapOverflow.Home
     {
         private IPostDAO postDAO = Config.Context.GetPostDAO();
         private IUserLoginDAO loginDAO = Config.Context.GetUserLoginDAO();
+        private IUsersDAO usersDAO = Config.Context.GetUsersDAO();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -37,15 +38,17 @@ namespace HeapOverflow.Home
             post.Topic = tb_topic.Text;
             post.PostDate = DateTime.Now;
 
-            int id;
-            bool parse = int.TryParse(Session["user"].ToString(), out id);
+            var parse = int.TryParse(Session["user"].ToString(), out int id);
             if (parse)
             {
                 var login = loginDAO.GetUserLoginById(id);
                 post.User = login;
+                var user = login.User;
+                user.Post++;
+                usersDAO.UpdateUser(user);
+                post = postDAO.AddPost(post);
             }
 
-            post = postDAO.AddPost(post);
             Response.Redirect("PostDetail.aspx?id=" + post.Id);
         }
     }

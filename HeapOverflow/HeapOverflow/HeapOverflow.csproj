@@ -90,6 +90,7 @@
     <Content Include="Home\Logout.aspx" />
     <Content Include="Home\NewPost.aspx" />
     <Content Include="Home\PostDetail.aspx" />
+    <Content Include="Home\RemoveComment.aspx" />
     <Content Include="Home\RemovePost.aspx" />
     <Content Include="Image\example.jpg" />
     <Content Include="Resources\Css\Admin.css" />
@@ -172,18 +173,21 @@
     <Compile Include="DAO\Impl\RoleDAO.cs" />
     <Compile Include="DAO\Impl\UserLoginDAO.cs" />
     <Compile Include="DAO\Impl\UsersDAO.cs" />
+    <Compile Include="DAO\Impl\VotesDAO.cs" />
     <Compile Include="DAO\Inter\IAdminDAO.cs" />
     <Compile Include="DAO\Inter\ICommentDAO.cs" />
     <Compile Include="DAO\Inter\IPostDAO.cs" />
     <Compile Include="DAO\Inter\IRoleDAO.cs" />
     <Compile Include="DAO\Inter\IUserLoginDAO.cs" />
     <Compile Include="DAO\Inter\IUsersDAO.cs" />
+    <Compile Include="DAO\Inter\IVotesDAO.cs" />
     <Compile Include="Entity\Admin.cs" />
     <Compile Include="Entity\Comment.cs" />
     <Compile Include="Entity\Post.cs" />
     <Compile Include="Entity\Role.cs" />
     <Compile Include="Entity\UserLogin.cs" />
     <Compile Include="Entity\Users.cs" />
+    <Compile Include="Entity\Votes.cs" />
     <Compile Include="Home\AdminPanel.aspx.cs">
       <DependentUpon>AdminPanel.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -225,6 +229,13 @@
     </Compile>
     <Compile Include="Home\PostDetail.aspx.designer.cs">
       <DependentUpon>PostDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\RemoveComment.aspx.cs">
+      <DependentUpon>RemoveComment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\RemoveComment.aspx.designer.cs">
+      <DependentUpon>RemoveComment.aspx</DependentUpon>
     </Compile>
     <Compile Include="Home\RemovePost.aspx.cs">
       <DependentUpon>RemovePost.aspx</DependentUpon>

@@ -7,6 +7,8 @@
     width: 200px;
     height: 200px;
     margin-right: 20px;
+    border: solid 3px #11a0ff;
+    border-radius: 15px;
 }
 
 #lbl_post, #lbl_star {
@@ -18,4 +20,8 @@
     height: 30px;
     border: solid 0;
     border-radius: 15px;
+}
+
+#btn_edit:hover {
+    background-color: silver;
 }

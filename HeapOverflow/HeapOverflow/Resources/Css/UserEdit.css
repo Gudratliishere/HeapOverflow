@@ -27,3 +27,9 @@
     display: inline;
     height: auto;
 }
+
+#img_profilePhoto {
+    width: 300px;
+    height: 300px;
+
+}

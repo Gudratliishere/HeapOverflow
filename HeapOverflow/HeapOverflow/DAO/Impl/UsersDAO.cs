@@ -34,18 +34,17 @@ namespace HeapOverflow.DAO.Impl
         {
             try
             {
-                string query = "insert into users (name, surname, photo_path, description, post, star) values (@name, @surname, @photo_path, @description, " +
-                    "@post, @star); select LAST_INSERT_ID()";
+                string query = "insert into users (name, surname, photo, description, post) values (@name, @surname, @photo, @description, " +
+                    "@post); select LAST_INSERT_ID()";
 
                 con.Open();
                 cmd.Parameters.Clear();
                 cmd.CommandText = query;
                 cmd.Parameters.AddWithValue("@name", user.Name);
                 cmd.Parameters.AddWithValue("@surname", user.Surname);
-                cmd.Parameters.AddWithValue("@photo_path", user.PhotoPath);
+                cmd.Parameters.AddWithValue("@photo", user.Photo);
                 cmd.Parameters.AddWithValue("@description", user.Description);
                 cmd.Parameters.AddWithValue("@post", user.Post);
-                cmd.Parameters.AddWithValue("@star", user.Star);
 
                 int id = Convert.ToInt32(cmd.ExecuteScalar());
                 if (id > 0)
@@ -99,10 +98,9 @@ namespace HeapOverflow.DAO.Impl
             user.Id = Convert.ToInt32(mdr.GetString(mdr.GetOrdinal("id")));
             user.Name = mdr.GetString(mdr.GetOrdinal("name"));
             user.Surname = mdr.GetString(mdr.GetOrdinal("surname"));
-            user.PhotoPath = mdr.GetString(mdr.GetOrdinal("photo_path"));
+            user.Photo = (byte[])mdr["photo"];
             user.Description = mdr.GetString(mdr.GetOrdinal("description"));
             user.Post = Convert.ToInt32(mdr.GetString(mdr.GetOrdinal("post")));
-            user.Star = Convert.ToInt32(mdr.GetString(mdr.GetOrdinal("star")));
         }
 
         public Users RemoveUser(Users user)
@@ -132,8 +130,8 @@ namespace HeapOverflow.DAO.Impl
         {
             try
             {
-                string query = "update users set name = @name, surname = @surname, photo_path = @photo_path, description = @description, post = @post, " +
-                    "star = @star where id = @id";
+                string query = "update users set name = @name, surname = @surname, photo = @photo, description = @description, post = @post " +
+                    "where id = @id";
 
                 con.Open();
                 cmd.Parameters.Clear();
@@ -141,10 +139,9 @@ namespace HeapOverflow.DAO.Impl
                 cmd.Parameters.AddWithValue("@id", user.Id);
                 cmd.Parameters.AddWithValue("@name", user.Name);
                 cmd.Parameters.AddWithValue("@surname", user.Surname);
-                cmd.Parameters.AddWithValue("@photo_path", user.PhotoPath);
+                cmd.Parameters.AddWithValue("@photo", user.Photo);
                 cmd.Parameters.AddWithValue("@description", user.Description);
                 cmd.Parameters.AddWithValue("@post", user.Post);
-                cmd.Parameters.AddWithValue("@star", user.Star);
                 cmd.ExecuteNonQuery();
 
                 con.Close();

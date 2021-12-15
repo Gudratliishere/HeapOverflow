@@ -8,12 +8,21 @@ namespace HeapOverflow.Config
 {
     public class Logger
     {
-        private readonly string _filePath = @"D:\log.txt";
+        private static readonly string _directory = @"C:\ProgramData\Heapoverflow";
+        private static readonly string _filePath = _directory + @"\log.txt";
         private string className = "Empty";
 
         public Logger(string className)
         {
             this.className = className;
+            CreateDirectory();
+        }
+
+        private void CreateDirectory()
+        {
+            if (!Directory.Exists(_directory))
+                Directory.CreateDirectory(_directory);
+
         }
 
         public void Log(string data)

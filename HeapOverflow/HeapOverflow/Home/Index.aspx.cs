@@ -17,6 +17,7 @@ namespace HeapOverflow.Home
 
         private IPostDAO postDAO = Config.Context.GetPostDAO();
         private ICommentDAO commentDAO = Config.Context.GetCommentDAO();
+        private IVotesDAO voteDAO = Config.Context.GetVotesDAO();
 
         private static int offset = 0;
         private static readonly int next = 10;
@@ -116,7 +117,7 @@ namespace HeapOverflow.Home
         private HtmlGenericControl GetDivReplies(Post post)
         {
             HtmlGenericControl span = new HtmlGenericControl("span");
-            span.InnerHtml = commentDAO.GetCommentsByPost(post).Count.ToString() + " replies\n" + post.LikeCount + " likes";
+            span.InnerHtml = commentDAO.GetCommentsByPost(post).Count.ToString() + " replies\n" + voteDAO.GetLikesCountByPost(post) + " likes";
 
             HtmlGenericControl replies = new HtmlGenericControl("div");
             replies.Attributes.Add("class", "replies");

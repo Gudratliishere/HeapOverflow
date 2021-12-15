@@ -15,6 +15,7 @@ namespace HeapOverflow.Config
         private static IRoleDAO roleDAO = null;
         private static IPostDAO postDAO = null;
         private static ICommentDAO commentDAO = null;
+        private static IVotesDAO votesDAO = null;
 
         public static IAdminDAO GetAdminDAO ()
         {
@@ -51,9 +52,7 @@ namespace HeapOverflow.Config
         public static IPostDAO GetPostDAO()
         {
             if (postDAO == null)
-            {
                 postDAO = new PostDAO();
-            }
 
             return postDAO;
         }
@@ -61,11 +60,17 @@ namespace HeapOverflow.Config
         public static ICommentDAO GetCommentDAO ()
         {
             if (commentDAO == null)
-            {
                 commentDAO = new CommentDAO();
-            }
 
             return commentDAO;
+        }
+
+        public static IVotesDAO GetVotesDAO ()
+        {
+            if (votesDAO == null)
+                votesDAO = new VotesDAO();
+
+            return votesDAO;
         }
     }
 }

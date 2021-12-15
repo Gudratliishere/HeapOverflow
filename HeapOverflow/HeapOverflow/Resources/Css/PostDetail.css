@@ -38,6 +38,7 @@
 }
 
 .remove {
+    float: right;
     background-color: rgb(50, 65, 60);
     border: solid 0;
     width: 70px;

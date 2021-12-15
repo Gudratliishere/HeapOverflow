@@ -9,14 +9,21 @@ namespace HeapOverflow.Config
 {
     public class Configuration
     {
-        private static readonly Logger _log = new Logger("CashierDAO");
+        public readonly string _imagesDirectory = @"C:\ProgramData\Heapoverflow\images";
+        public readonly string _defaultImage = @"C:\ProgramData\Heapoverflow\images\default_pp.png";
 
-        private readonly string connectionConfigFilePath = "database_connection.xml";
+        private static readonly Logger _log = new Logger("CashierDAO");
+        private static readonly string _directory = @"C:\ProgramData\Heapoverflow";
+        private static readonly string _connectionConfigFilePath = _directory + @"\database_connection.xml";
         private Connection connection = null;
 
         private static Configuration config = null;
 
-        private Configuration() { }
+        private Configuration()
+        {
+            CreateDirectory();
+            CreateDatabase();
+        }
 
         public static Configuration GetConfig()
         {
@@ -29,6 +36,15 @@ namespace HeapOverflow.Config
         public static void ResetConfig()
         {
             config = null;
+        }
+
+        private void CreateDirectory()
+        {
+            if (!Directory.Exists(_directory))
+                Directory.CreateDirectory(_directory);
+
+            if (!Directory.Exists(_imagesDirectory))
+                Directory.CreateDirectory(_imagesDirectory);
         }
 
         public void CreateDatabase()
@@ -44,9 +60,9 @@ namespace HeapOverflow.Config
 
             connection = new Connection();
 
-            if (File.Exists(connectionConfigFilePath))
+            if (File.Exists(_connectionConfigFilePath))
             {
-                var xml = XmlReader.Create(connectionConfigFilePath);
+                var xml = XmlReader.Create(_connectionConfigFilePath);
                 while (xml.Read())
                     if (xml.IsStartElement())
                         FillConnectionWithXml(connection, xml);
@@ -59,16 +75,16 @@ namespace HeapOverflow.Config
 
         public void WriteConnection(Connection connection)
         {
-            if (!File.Exists(connectionConfigFilePath))
+            if (!File.Exists(_connectionConfigFilePath))
             {
-                var file = File.Create(connectionConfigFilePath);
+                var file = File.Create(_connectionConfigFilePath);
                 file.Close();
             }
 
             try
             {
                 var setting = new XmlWriterSettings { Indent = true };
-                var xml = XmlWriter.Create(connectionConfigFilePath, setting);
+                var xml = XmlWriter.Create(_connectionConfigFilePath, setting);
                 xml.WriteStartDocument();
                 xml.WriteStartElement("details");
                 xml.WriteElementString("host", connection.Host);

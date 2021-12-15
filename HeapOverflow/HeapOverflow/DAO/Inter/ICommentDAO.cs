@@ -12,6 +12,6 @@ namespace HeapOverflow.DAO.Inter
         List<Comment> GetCommentsByPost(Post post);
         Comment AddComment(Comment comment);
         Comment UpdateComment(Comment comment);
-        Comment RemoveComment(Comment comment);
+        void RemoveComment(int id);
     }
 }

@@ -38,7 +38,7 @@ namespace HeapOverflow.DAO.Impl
         {
             try
             {
-                string query = "insert into post (name, topic, like_count, dislike_count, user, post_date) values (@name, @topic, @like_count, @dislike_count, " +
+                string query = "insert into post (name, topic, user, post_date) values (@name, @topic, " +
                     "@user, @post_date); select LAST_INSERT_ID()";
 
                 con.Open();
@@ -46,8 +46,6 @@ namespace HeapOverflow.DAO.Impl
                 cmd.CommandText = query;
                 cmd.Parameters.AddWithValue("@name", post.Name);
                 cmd.Parameters.AddWithValue("@topic", post.Topic);
-                cmd.Parameters.AddWithValue("@like_count", post.LikeCount);
-                cmd.Parameters.AddWithValue("@dislike_count", post.DislikeCount);
                 cmd.Parameters.AddWithValue("@user", post.User.Id);
                 cmd.Parameters.AddWithValue("@post_date", post.PostDate);
 
@@ -292,8 +290,6 @@ namespace HeapOverflow.DAO.Impl
             post.Id = Convert.ToInt32(mdr.GetString(mdr.GetOrdinal("id")));
             post.Name = mdr.GetString(mdr.GetOrdinal("name"));
             post.Topic = mdr.GetString(mdr.GetOrdinal("topic"));
-            post.LikeCount = Convert.ToInt32(mdr.GetString(mdr.GetOrdinal("like_count")));
-            post.DislikeCount = Convert.ToInt32(mdr.GetString(mdr.GetOrdinal("dislike_count")));
 
             int userId = Convert.ToInt32(mdr.GetString(mdr.GetOrdinal("user")));
             post.User = loginDAO.GetUserLoginById(userId);
@@ -327,7 +323,7 @@ namespace HeapOverflow.DAO.Impl
         {
             try
             {
-                string query = "update post set name = @name, topic = @topic, like_count = @like_count, dislike_count = @dislike_count, user = @user, " +
+                string query = "update post set name = @name, topic = @topic, user = @user, " +
                     "post_date = @post_date where id = @id";
 
                 con.Open();
@@ -336,8 +332,6 @@ namespace HeapOverflow.DAO.Impl
                 cmd.Parameters.AddWithValue("@id", post.Id);
                 cmd.Parameters.AddWithValue("@name", post.Name);
                 cmd.Parameters.AddWithValue("@topic", post.Topic);
-                cmd.Parameters.AddWithValue("@like_count", post.LikeCount);
-                cmd.Parameters.AddWithValue("@dislike_count", post.DislikeCount);
                 cmd.Parameters.AddWithValue("@user", post.User.Id);
                 cmd.Parameters.AddWithValue("@post_date", post.PostDate);
 
