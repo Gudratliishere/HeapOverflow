@@ -1,0 +1,235 @@
+>>>15.12.2021 22:38:21  Index.aspx
+Salam
+
+>>>15.12.2021 22:44:41  CashierDAO
+İşlem, başka bir işlem tarafından kullanıldığından 'C:\ProgramData\Heapoverflow\database_connection.xml' dosyasına erişemiyor.
+   konum: System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   konum: System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   konum: System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy)
+   konum: System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, Boolean useAsync)
+   konum: System.Xml.XmlWriterSettings.CreateWriter(String outputFileName)
+   konum: System.Xml.XmlWriter.Create(String outputFileName, XmlWriterSettings settings)
+   konum: HeapOverflow.Config.Configuration.WriteConnection(Connection connection) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\Config\Config.cs içinde: satır 82
+
+>>>15.12.2021 23:09:43  VotesDAO
+Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+   konum: HeapOverflow.DAO.Impl.VotesDAO.GetVote(UserLogin login, Post post) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\VotesDAO.cs içinde: satır 79
+
+>>>15.12.2021 23:09:44  VotesDAO
+Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+   konum: HeapOverflow.DAO.Impl.VotesDAO.GetVote(UserLogin login, Post post) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\VotesDAO.cs içinde: satır 79
+
+>>>15.12.2021 23:11:27  VotesDAO
+Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+   konum: HeapOverflow.DAO.Impl.VotesDAO.GetVote(UserLogin login, Post post) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\VotesDAO.cs içinde: satır 79
+
+>>>15.12.2021 23:11:29  VotesDAO
+Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+   konum: HeapOverflow.DAO.Impl.VotesDAO.GetVote(UserLogin login, Post post) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\VotesDAO.cs içinde: satır 79
+
+>>>15.12.2021 23:11:33  VotesDAO
+Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+   konum: HeapOverflow.DAO.Impl.VotesDAO.GetVote(UserLogin login, Post post) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\VotesDAO.cs içinde: satır 79
+
+>>>15.12.2021 23:11:35  VotesDAO
+Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+   konum: HeapOverflow.DAO.Impl.VotesDAO.GetVote(UserLogin login, Post post) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\VotesDAO.cs içinde: satır 79
+
+>>>15.12.2021 23:11:37  VotesDAO
+Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+   konum: HeapOverflow.DAO.Impl.VotesDAO.GetVote(UserLogin login, Post post) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\VotesDAO.cs içinde: satır 79
+
+>>>15.12.2021 23:11:38  VotesDAO
+Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+   konum: HeapOverflow.DAO.Impl.VotesDAO.GetVote(UserLogin login, Post post) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\VotesDAO.cs içinde: satır 79
+
+>>>16.12.2021 00:46:29  VotesDAO
+Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+   konum: HeapOverflow.DAO.Impl.VotesDAO.GetVote(UserLogin login, Post post) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\VotesDAO.cs içinde: satır 79
+
+>>>16.12.2021 00:46:30  VotesDAO
+Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+   konum: HeapOverflow.DAO.Impl.VotesDAO.GetVote(UserLogin login, Post post) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\VotesDAO.cs içinde: satır 79
+
+>>>16.12.2021 00:46:35  VotesDAO
+Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+   konum: HeapOverflow.DAO.Impl.VotesDAO.GetVote(UserLogin login, Post post) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\VotesDAO.cs içinde: satır 79
+
+>>>16.12.2021 00:46:49  UsersDAO
+Unknown column 'photo_path' in 'field list'
+   konum: MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   konum: MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   konum: MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   konum: HeapOverflow.DAO.Impl.UsersDAO.UpdateUser(Users user) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\UsersDAO.cs içinde: satır 148
+
+>>>16.12.2021 01:14:59  VotesDAO
+Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+   konum: HeapOverflow.DAO.Impl.VotesDAO.GetVote(UserLogin login, Post post) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\VotesDAO.cs içinde: satır 79
+
+>>>16.12.2021 01:15:01  VotesDAO
+Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+   konum: HeapOverflow.DAO.Impl.VotesDAO.GetVote(UserLogin login, Post post) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\VotesDAO.cs içinde: satır 79
+
+>>>16.12.2021 01:16:07  UsersDAO
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'where id = 13' at line 1059
+   konum: MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   konum: MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   konum: MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   konum: HeapOverflow.DAO.Impl.UsersDAO.UpdateUser(Users user) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\UsersDAO.cs içinde: satır 145
+
+>>>16.12.2021 01:17:10  VotesDAO
+Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+   konum: HeapOverflow.DAO.Impl.VotesDAO.GetVote(UserLogin login, Post post) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\VotesDAO.cs içinde: satır 79
+
+>>>16.12.2021 01:17:12  VotesDAO
+Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+   konum: HeapOverflow.DAO.Impl.VotesDAO.GetVote(UserLogin login, Post post) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\VotesDAO.cs içinde: satır 79
+
+>>>16.12.2021 01:20:17  VotesDAO
+Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+   konum: HeapOverflow.DAO.Impl.VotesDAO.GetVote(UserLogin login, Post post) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\VotesDAO.cs içinde: satır 79
+
+>>>16.12.2021 01:20:21  VotesDAO
+Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+   konum: HeapOverflow.DAO.Impl.VotesDAO.GetVote(UserLogin login, Post post) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\VotesDAO.cs içinde: satır 79
+
+>>>16.12.2021 01:20:25  VotesDAO
+Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+   konum: HeapOverflow.DAO.Impl.VotesDAO.GetVote(UserLogin login, Post post) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\VotesDAO.cs içinde: satır 79
+
+>>>16.12.2021 19:10:20  VotesDAO
+Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+   konum: HeapOverflow.DAO.Impl.VotesDAO.GetVote(UserLogin login, Post post) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\VotesDAO.cs içinde: satır 79
+
+>>>16.12.2021 19:10:24  VotesDAO
+Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+   konum: HeapOverflow.DAO.Impl.VotesDAO.GetVote(UserLogin login, Post post) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\VotesDAO.cs içinde: satır 79
+
+>>>16.12.2021 19:10:26  VotesDAO
+Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+   konum: HeapOverflow.DAO.Impl.VotesDAO.GetVote(UserLogin login, Post post) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\VotesDAO.cs içinde: satır 79
+
+>>>16.12.2021 19:28:27  VotesDAO
+Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+   konum: HeapOverflow.DAO.Impl.VotesDAO.GetVote(UserLogin login, Post post) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\VotesDAO.cs içinde: satır 79
+
+>>>16.12.2021 19:28:28  VotesDAO
+Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+   konum: HeapOverflow.DAO.Impl.VotesDAO.GetVote(UserLogin login, Post post) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\VotesDAO.cs içinde: satır 79
+
+>>>16.12.2021 19:33:41  VotesDAO
+Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+   konum: HeapOverflow.DAO.Impl.VotesDAO.GetVote(UserLogin login, Post post) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\VotesDAO.cs içinde: satır 79
+
+>>>16.12.2021 19:33:50  VotesDAO
+Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+   konum: HeapOverflow.DAO.Impl.VotesDAO.GetVote(UserLogin login, Post post) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\VotesDAO.cs içinde: satır 79
+
+>>>16.12.2021 20:24:06  VotesDAO
+Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+   konum: HeapOverflow.DAO.Impl.VotesDAO.GetVote(UserLogin login, Post post) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\VotesDAO.cs içinde: satır 79
+
+>>>16.12.2021 20:24:09  VotesDAO
+Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+   konum: HeapOverflow.DAO.Impl.VotesDAO.GetVote(UserLogin login, Post post) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\VotesDAO.cs içinde: satır 79
+
+>>>16.12.2021 20:24:13  VotesDAO
+Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+   konum: HeapOverflow.DAO.Impl.VotesDAO.GetVote(UserLogin login, Post post) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\VotesDAO.cs içinde: satır 79
+
+>>>16.12.2021 20:24:15  VotesDAO
+Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+   konum: HeapOverflow.DAO.Impl.VotesDAO.GetVote(UserLogin login, Post post) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\VotesDAO.cs içinde: satır 79
+
+>>>16.12.2021 20:24:17  VotesDAO
+Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+   konum: HeapOverflow.DAO.Impl.VotesDAO.GetVote(UserLogin login, Post post) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\VotesDAO.cs içinde: satır 79
+
+>>>16.12.2021 20:26:43  VotesDAO
+Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+   konum: HeapOverflow.DAO.Impl.VotesDAO.GetVote(UserLogin login, Post post) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\VotesDAO.cs içinde: satır 79
+
+>>>16.12.2021 20:26:59  PostDAO
+Cannot delete or update a parent row: a foreign key constraint fails (`heapoverflow`.`vote`, CONSTRAINT `vote_ibfk_2` FOREIGN KEY (`post`) REFERENCES `post` (`id`))
+   konum: MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   konum: MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   konum: MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   konum: HeapOverflow.DAO.Impl.PostDAO.RemovePost(Post post) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\PostDAO.cs içinde: satır 309
+
+>>>16.12.2021 20:27:27  PostDAO
+Cannot delete or update a parent row: a foreign key constraint fails (`heapoverflow`.`vote`, CONSTRAINT `vote_ibfk_2` FOREIGN KEY (`post`) REFERENCES `post` (`id`))
+   konum: MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   konum: MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   konum: MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   konum: HeapOverflow.DAO.Impl.PostDAO.RemovePost(Post post) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\PostDAO.cs içinde: satır 309
+
+>>>16.12.2021 20:27:40  PostDAO
+Cannot delete or update a parent row: a foreign key constraint fails (`heapoverflow`.`vote`, CONSTRAINT `vote_ibfk_2` FOREIGN KEY (`post`) REFERENCES `post` (`id`))
+   konum: MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   konum: MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   konum: MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   konum: HeapOverflow.DAO.Impl.PostDAO.RemovePost(Post post) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\PostDAO.cs içinde: satır 309
+
+>>>16.12.2021 20:35:48  PostDAO
+Cannot delete or update a parent row: a foreign key constraint fails (`heapoverflow`.`vote`, CONSTRAINT `vote_ibfk_2` FOREIGN KEY (`post`) REFERENCES `post` (`id`))
+   konum: MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   konum: MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   konum: MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   konum: HeapOverflow.DAO.Impl.PostDAO.RemovePost(Post post) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\PostDAO.cs içinde: satır 309
+
+>>>16.12.2021 20:42:15  VotesDAO
+Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+   konum: HeapOverflow.DAO.Impl.VotesDAO.GetVote(UserLogin login, Post post) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\VotesDAO.cs içinde: satır 79
+
+>>>16.12.2021 20:42:17  VotesDAO
+Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+   konum: HeapOverflow.DAO.Impl.VotesDAO.GetVote(UserLogin login, Post post) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\VotesDAO.cs içinde: satır 79
+
+>>>16.12.2021 20:42:38  CommentDAO
+Error occured while deleting data with this postId: 10
+   konum: HeapOverflow.DAO.Impl.CommentDAO.RemoveCommentByPost(Int32 postId) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\CommentDAO.cs içinde: satır 175
+
+>>>16.12.2021 20:50:46  CommentDAO
+Error occured while deleting data with this postId: 14
+   konum: HeapOverflow.DAO.Impl.CommentDAO.RemoveCommentByPost(Int32 postId) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\CommentDAO.cs içinde: satır 175
+
+>>>16.12.2021 20:57:11  VotesDAO
+Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+   konum: HeapOverflow.DAO.Impl.VotesDAO.GetVote(UserLogin login, Post post) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\VotesDAO.cs içinde: satır 79
+
+>>>16.12.2021 20:57:13  VotesDAO
+Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+   konum: HeapOverflow.DAO.Impl.VotesDAO.GetVote(UserLogin login, Post post) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\VotesDAO.cs içinde: satır 79
+
+>>>16.12.2021 21:57:50  VotesDAO
+Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+   konum: HeapOverflow.DAO.Impl.VotesDAO.GetVote(UserLogin login, Post post) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\VotesDAO.cs içinde: satır 79
+
+>>>16.12.2021 21:57:52  VotesDAO
+Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+   konum: HeapOverflow.DAO.Impl.VotesDAO.GetVote(UserLogin login, Post post) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\VotesDAO.cs içinde: satır 79
+

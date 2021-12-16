@@ -13,5 +13,6 @@ namespace HeapOverflow.DAO.Inter
         Comment AddComment(Comment comment);
         Comment UpdateComment(Comment comment);
         void RemoveComment(int id);
+        void RemoveCommentByPost(int postId);
     }
 }

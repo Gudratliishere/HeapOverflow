@@ -49,11 +49,6 @@ namespace HeapOverflow.Account
             }
         }
 
-        protected void btn_logout_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("Logout.aspx");
-        }
-
         protected void btn_account_Click(object sender, EventArgs e)
         {
             Response.Redirect("../Account/User.aspx?id=" + Session["user"]);

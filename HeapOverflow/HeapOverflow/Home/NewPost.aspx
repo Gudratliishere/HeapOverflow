@@ -34,6 +34,8 @@
 			<asp:TextBox ID="tb_name" runat="server" placeholder="Name"></asp:TextBox>
 			<asp:TextBox ID="tb_topic" TextMode="MultiLine" runat="server" placeholder="Topic.."></asp:TextBox>
 			<asp:Button ID="btn_post" runat="server" Text="Post" OnClick="btn_post_Click" />
+			<br />
+			<asp:Label ID="lbl_message" runat="server" Text=""></asp:Label>
 		</div>
 
 		<div class="forum-info">

@@ -159,5 +159,27 @@ namespace HeapOverflow.DAO.Impl
                 return null;
             }
         }
+
+        public void RemoveCommentByPost(int postId)
+        {
+            try
+            {
+                string query = "delete from comment where post = @post";
+
+                con.Open();
+                cmd.Parameters.Clear();
+                cmd.CommandText = query;
+                cmd.Parameters.AddWithValue("@post", postId);
+
+                if (cmd.ExecuteNonQuery() == 0)
+                    throw new Exception("Error occured while deleting data with this postId: " + postId);
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                _log.Log(ex.Message + "\r\n" + ex.StackTrace);
+                con.Close();
+            }
+        }
     }
 }

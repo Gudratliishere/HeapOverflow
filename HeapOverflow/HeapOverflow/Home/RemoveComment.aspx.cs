@@ -13,6 +13,7 @@ namespace HeapOverflow.Home
     {
         private IUserLoginDAO loginDAO = Config.Context.GetUserLoginDAO();
         private ICommentDAO commentDAO = Config.Context.GetCommentDAO();
+        private IPostDAO postDAO = Config.Context.GetPostDAO();
 
         private UserLogin login;
         private int commentId;
@@ -28,16 +29,16 @@ namespace HeapOverflow.Home
 
         private void DefineParameters ()
         {
+            int.TryParse(Request.Params["commentId"], out commentId);
+            int.TryParse(Request.Params["postId"], out postId);
+
             var parse = int.TryParse(Session["user"].ToString(), out int loginId);
             if (parse)
             {
                 login = loginDAO.GetUserLoginById(loginId);
-                if (login == null || login.Role.Name.Equals("USER"))
+                if (login == null || (postDAO.GetPostById(postId).User.Id != login.Id && login.Role.Name.Equals("USER")))
                     Response.Redirect("Index.aspx");
             }
-
-            int.TryParse(Request.Params["commentId"], out commentId);
-            int.TryParse(Request.Params["postId"], out postId);
         }
 
         protected void btn_remove_Click(object sender, EventArgs e)

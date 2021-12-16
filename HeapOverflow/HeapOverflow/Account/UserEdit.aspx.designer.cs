@@ -40,15 +40,6 @@ namespace HeapOverflow.Account {
         protected global::System.Web.UI.WebControls.Button btn_account;
         
         /// <summary>
-        /// btn_logout control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_logout;
-        
-        /// <summary>
         /// img_profilePhoto control.
         /// </summary>
         /// <remarks>

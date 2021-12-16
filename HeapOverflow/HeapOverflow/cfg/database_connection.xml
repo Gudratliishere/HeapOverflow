@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<details>
+  <host>localhost</host>
+  <port>3306</port>
+  <username>vssx</username>
+  <password>6446</password>
+  <database>heapoverflow</database>
+  <crypt_power>4</crypt_power>
+</details>

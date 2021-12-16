@@ -155,7 +155,7 @@ namespace HeapOverflow.DAO.Impl
             }
         }
 
-        public Votes RemoveVote(Votes vote)
+        public void RemoveVote(int voteId)
         {
             try
             {
@@ -164,17 +164,15 @@ namespace HeapOverflow.DAO.Impl
                 con.Open();
                 cmd.Parameters.Clear();
                 cmd.CommandText = query;
-                cmd.Parameters.AddWithValue("@id", vote.Id);
+                cmd.Parameters.AddWithValue("@id", voteId);
 
                 cmd.ExecuteNonQuery();
                 con.Close();
-                return vote;
             }
             catch (Exception ex)
             {
                 _log.Log(ex.Message + "\r\n" + ex.StackTrace);
                 con.Close();
-                return null;
             }
         }
 
@@ -199,6 +197,27 @@ namespace HeapOverflow.DAO.Impl
                 _log.Log(ex.Message + "\r\n" + ex.StackTrace);
                 con.Close();
                 return null;
+            }
+        }
+
+        public void RemoveVotesByPost(int postId)
+        {
+            try
+            {
+                string query = "delete from vote where post = @post";
+
+                con.Open();
+                cmd.Parameters.Clear();
+                cmd.CommandText = query;
+                cmd.Parameters.AddWithValue("@post", postId);
+
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                _log.Log(ex.Message + "\r\n" + ex.StackTrace);
+                con.Close();
             }
         }
     }

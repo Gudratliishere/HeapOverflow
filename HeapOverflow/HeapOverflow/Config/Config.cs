@@ -9,11 +9,11 @@ namespace HeapOverflow.Config
 {
     public class Configuration
     {
-        public readonly string _imagesDirectory = @"C:\ProgramData\Heapoverflow\images";
-        public readonly string _defaultImage = @"C:\ProgramData\Heapoverflow\images\default_pp.png";
+        public readonly string _imagesDirectory = AppDomain.CurrentDomain.BaseDirectory + @"\Image";
+        public readonly string _defaultImage = AppDomain.CurrentDomain.BaseDirectory + @"\Image\default_pp.png";
 
         private static readonly Logger _log = new Logger("CashierDAO");
-        private static readonly string _directory = @"C:\ProgramData\Heapoverflow";
+        private static readonly string _directory = AppDomain.CurrentDomain.BaseDirectory + @"\cfg";
         private static readonly string _connectionConfigFilePath = _directory + @"\database_connection.xml";
         private Connection connection = null;
 

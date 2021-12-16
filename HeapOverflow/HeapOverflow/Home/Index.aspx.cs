@@ -129,7 +129,7 @@ namespace HeapOverflow.Home
         {
             HtmlGenericControl a = new HtmlGenericControl("a");
             a.Attributes.Add("href", "PostDetail.aspx?id=" + post.Id);
-            a.InnerHtml = post.Topic;
+            a.InnerHtml = post.Name;
 
             HtmlGenericControl br = new HtmlGenericControl("br");
 

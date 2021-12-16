@@ -14,6 +14,9 @@ namespace HeapOverflow.Auth
 
         private readonly string username = "gudratlicompany@gmail.com";
         private readonly string password = "ziqqeshzomumybpl";
+        private readonly string sender = "Heap Overflow";
+        private readonly string subject = "Email confirmation";
+		private readonly string body;
 
         private string email;
         private string code;
@@ -27,7 +30,8 @@ namespace HeapOverflow.Auth
         public EmailSender ()
         {
             code = new Random().Next(100000, 999999).ToString();
-        }
+			body = "Code: <b>" + code + "</b>";
+		}
 
         public void SendEmail()
         {
@@ -36,12 +40,9 @@ namespace HeapOverflow.Auth
             {
                 FillSMTP(smtp);
 
-                var subject = "Email confirmation";
-                var body = "Code: " + code;
-
                 try
                 {
-                    smtp.Send(username, email, subject, body);
+                    smtp.Send(GetMailMessage());
                     sendTime = DateTime.Now;
                 }
                 catch (Exception ex)
@@ -51,7 +52,19 @@ namespace HeapOverflow.Auth
             };
         }
 
-        private void FillSMTP (SmtpClient smtp)
+		private MailMessage GetMailMessage()
+		{
+			MailMessage message = new MailMessage();
+			message.To.Add(new MailAddress(email));
+			message.From = new MailAddress(username, sender);
+			message.Subject = subject;
+			message.IsBodyHtml = true;
+			message.Body = body;
+
+			return message;
+		}
+
+		private void FillSMTP (SmtpClient smtp)
         {
             smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
             smtp.UseDefaultCredentials = false;

@@ -47,6 +47,10 @@
     color: white;
 }
 
+.remove:hover {
+    color: silver;
+}
+
 .comment-body {
     display: block;
     background-color: #131415;

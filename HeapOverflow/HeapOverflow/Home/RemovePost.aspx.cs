@@ -13,7 +13,9 @@ namespace HeapOverflow.Home
     {
         private IPostDAO postDAO = Config.Context.GetPostDAO();
         private ICommentDAO commentDAO = Config.Context.GetCommentDAO();
+        private IUserLoginDAO loginDAO = Config.Context.GetUserLoginDAO();
         private IUsersDAO usersDAO = Config.Context.GetUsersDAO();
+        private IVotesDAO votesDAO = Config.Context.GetVotesDAO();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -29,12 +31,20 @@ namespace HeapOverflow.Home
                 var post = postDAO.GetPostById(id);
                 if (post != null)
                 {
+                    var parseSession = int.TryParse(Session["user"].ToString(), out int loginId);
+                    if (parseSession)
+                    {
+                        var login = loginDAO.GetUserLoginById(loginId);
+                        if (login == null || (postDAO.GetPostById(id).User.Id != login.Id && login.Role.Name.Equals("USER")))
+                            Response.Redirect("Index.aspx");
+                    }
+
                     var user = post.User.User;
                     user.Post--;
                     usersDAO.UpdateUser(user);
 
-                    var comments = commentDAO.GetCommentsByPost(post);
-                    comments.ForEach((comment) => commentDAO.RemoveComment(comment.Id));
+                    votesDAO.RemoveVotesByPost(post.Id);
+                    commentDAO.RemoveCommentByPost(post.Id);
                     postDAO.RemovePost(post);
                     Response.Redirect("Index.aspx");
                 }

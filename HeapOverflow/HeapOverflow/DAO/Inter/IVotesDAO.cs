@@ -14,6 +14,7 @@ namespace HeapOverflow.DAO.Inter
         Votes GetVote(UserLogin login, Post post);
         Votes AddVote(Votes vote);
         Votes UpdateVote(Votes vote);
-        Votes RemoveVote(Votes vote);
+        void RemoveVote(int voteId);
+        void RemoveVotesByPost(int postId);
     }
 }

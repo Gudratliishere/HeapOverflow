@@ -27,9 +27,6 @@
 				</nav>
 				<a href="#" class="bar-icon" id="iconBar"><i class="fa fa-bars" onclick="hideIconBar()"></i></a>
 				<div class="brand">Heap Overflow</div>
-				<div class="account">
-					<asp:Button ID="btn_logout" runat="server" Text="Logout" CssClass="logout" OnClick="btn_logout_Click" />
-				</div>
 			</div>
 		</header>
 		<div class="container">

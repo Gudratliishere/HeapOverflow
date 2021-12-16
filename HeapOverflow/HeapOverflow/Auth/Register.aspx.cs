@@ -61,6 +61,7 @@ namespace HeapOverflow.Auth
                 emailSender = new EmailSender();
                 emailSender.Email = tb_email.Text.Trim();
                 emailSender.SendEmail();
+				btn_registerBody.Enabled = false;
                 pnl_emailConfirm.Visible = true;
                 btn_register.Visible = false;
             }

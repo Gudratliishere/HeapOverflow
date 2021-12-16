@@ -75,7 +75,7 @@ namespace HeapOverflow.Home
             Button button = new Button();
             button.CssClass = "remove";
             button.ID = "btn_removeComment" + comment.Id;
-            button.Visible = login != null && (login.Role.Name.Equals("MODERATOR") || post.User.Id == post.Id);
+            button.Visible = login != null && (login.Role.Name.Equals("MODERATOR") || post.User.Id == login.Id);
             button.Text = "Remove";
             button.Click += delegate (object sender, EventArgs e)
             {
@@ -142,7 +142,7 @@ namespace HeapOverflow.Home
                     login = loginDAO.GetUserLoginById(id);
                     if (login != null)
                     {
-                        if (login.Role == roleDAO.GetUserRole())
+                        if (login.Role.Name.Equals("USER"))
                             btn_removePost.Visible = false;
                         else
                             btn_removePost.Visible = true;
@@ -227,7 +227,7 @@ namespace HeapOverflow.Home
         private void ClearLikeVote()
         {
             btn_postLike.Style.Add("background-color", "#2C2C2C");
-            votesDAO.RemoveVote(vote);
+            votesDAO.RemoveVote(vote.Id);
         }
 
         private void GiveVote (int vote)
@@ -268,7 +268,7 @@ namespace HeapOverflow.Home
         private void ClearDislikeVote()
         {
             btn_postDislike.Style.Add("background-color", "#2C2C2C");
-            votesDAO.RemoveVote(vote);
+            votesDAO.RemoveVote(vote.Id);
         }
 
         protected void btn_postComment_Click(object sender, EventArgs e)
