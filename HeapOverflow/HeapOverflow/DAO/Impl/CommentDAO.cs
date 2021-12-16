@@ -181,5 +181,34 @@ namespace HeapOverflow.DAO.Impl
                 con.Close();
             }
         }
-    }
+
+		public Comment GetCommentById(int id)
+		{
+			try
+			{
+				string query = "select * from comment where id = @id";
+
+				con.Open();
+				cmd.Parameters.Clear();
+				cmd.CommandText = query;
+				cmd.Parameters.AddWithValue("@id", id);
+
+				var mdr = cmd.ExecuteReader();
+				Comment comment = null;
+				if (mdr.Read())
+				{
+					comment = new Comment();
+					FillCommentWithMDR(comment, mdr);
+				}
+				con.Close();
+				return comment;
+			}
+			catch (Exception ex)
+			{
+				_log.Log(ex.Message + "\r\n" + ex.StackTrace);
+				con.Close();
+				return null;
+			}
+		}
+	}
 }

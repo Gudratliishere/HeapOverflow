@@ -45,7 +45,7 @@
 					<div class="authors">
 						<asp:Button ID="btn_username" runat="server" Text="Username" CssClass="username" OnClick="btn_username_Click" />
 						<br />
-						<asp:Label ID="lbl_topic" runat="server" Text="Topic" CssClass="content"></asp:Label>
+						<pre><asp:Label ID="lbl_topic" runat="server" Text="Topic" CssClass="content"></asp:Label></pre>
 						<div class="like-dislike">
 							<asp:Button ID="btn_postLike" runat="server" Text="Like (8)" CssClass="like" OnClick="btn_postLike_Click" />
 							<asp:Button ID="btn_postDislike" runat="server" Text="Dislike (3)" CssClass="dislike" OnClick="btn_postDislike_Click" />

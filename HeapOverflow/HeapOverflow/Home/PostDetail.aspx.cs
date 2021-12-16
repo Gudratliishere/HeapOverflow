@@ -75,7 +75,7 @@ namespace HeapOverflow.Home
             Button button = new Button();
             button.CssClass = "remove";
             button.ID = "btn_removeComment" + comment.Id;
-            button.Visible = login != null && (login.Role.Name.Equals("MODERATOR") || post.User.Id == login.Id);
+            button.Visible = login != null && (login.Role.Name.Equals("MODERATOR") || post.User.Id == login.Id || comment.User.Id == login.Id);
             button.Text = "Remove";
             button.Click += delegate (object sender, EventArgs e)
             {
@@ -92,13 +92,16 @@ namespace HeapOverflow.Home
             return hr;
         }
 
-        private Label GetCommentTopicLabel (Comment comment)
+        private HtmlGenericControl GetCommentTopicLabel (Comment comment)
         {
             Label lbl_topic = new Label();
             lbl_topic.ID = "lbl_comment" + comment.Id;
             lbl_topic.CssClass = "lbl_comment";
             lbl_topic.Text = comment.Topic;
-            return lbl_topic;
+
+			HtmlGenericControl pre = new HtmlGenericControl("pre");
+			pre.Controls.Add(lbl_topic);
+            return pre;
         }
 
         private Button GetCommentUsernameButton (Comment comment)

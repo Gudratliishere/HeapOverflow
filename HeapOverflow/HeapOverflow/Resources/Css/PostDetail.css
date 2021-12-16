@@ -11,6 +11,11 @@
 }
 
 .content {
+    margin-left: 10px;
+    display: inline-block;
+    max-width: 100%;
+    overflow: auto;
+    white-space: pre-wrap;
     flex: 80%;
 }
 
@@ -76,7 +81,12 @@
 }
 
 .lbl_comment {
+    margin-left: 10px;
+    display: inline-block;
+    max-width: 100%;
     font-size: 14px;
+    overflow: auto;
+    white-space: pre-wrap;
 }
 
 .like-dislike {

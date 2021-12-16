@@ -44,6 +44,7 @@ h1 {
 }
 
 .subforum-devider {
+    margin-top: 50px;
     display: block;
     border: 0px;
     height: 1px;

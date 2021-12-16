@@ -36,7 +36,8 @@ namespace HeapOverflow.Home
             if (parse)
             {
                 login = loginDAO.GetUserLoginById(loginId);
-                if (login == null || (postDAO.GetPostById(postId).User.Id != login.Id && login.Role.Name.Equals("USER")))
+                if (login == null || (postDAO.GetPostById(postId).User.Id != login.Id && login.Role.Name.Equals("USER") && 
+					commentDAO.GetCommentById(commentId).User.Id != login.Id))
                     Response.Redirect("Index.aspx");
             }
         }
