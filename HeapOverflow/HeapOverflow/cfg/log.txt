@@ -314,3 +314,604 @@ Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
 Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
    konum: HeapOverflow.DAO.Impl.VotesDAO.GetVote(UserLogin login, Post post) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\VotesDAO.cs içinde: satır 79
 
+>>>19.12.2021 17:57:34  DatabaseCreater
+No database selected
+   konum: MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   konum: MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   konum: MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   konum: HeapOverflow.Config.DatabaseCreater.RunCreateQuery(String query) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\Config\DatabaseCreater.cs içinde: satır 34
+
+>>>19.12.2021 17:57:35  DatabaseCreater
+No database selected
+   konum: MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   konum: MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   konum: MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   konum: HeapOverflow.Config.DatabaseCreater.RunCreateQuery(String query) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\Config\DatabaseCreater.cs içinde: satır 34
+
+>>>19.12.2021 17:57:35  DatabaseCreater
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general' at line 1
+   konum: MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   konum: MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   konum: MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   konum: HeapOverflow.Config.DatabaseCreater.RunCreateQuery(String query) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\Config\DatabaseCreater.cs içinde: satır 34
+
+>>>19.12.2021 17:57:35  DatabaseCreater
+No database selected
+   konum: MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   konum: MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   konum: MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   konum: HeapOverflow.Config.DatabaseCreater.RunCreateQuery(String query) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\Config\DatabaseCreater.cs içinde: satır 34
+
+>>>19.12.2021 17:57:35  DatabaseCreater
+No database selected
+   konum: MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   konum: MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   konum: MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   konum: HeapOverflow.Config.DatabaseCreater.RunCreateQuery(String query) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\Config\DatabaseCreater.cs içinde: satır 34
+
+>>>19.12.2021 17:57:35  DatabaseCreater
+No database selected
+   konum: MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   konum: MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   konum: MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   konum: HeapOverflow.Config.DatabaseCreater.RunCreateQuery(String query) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\Config\DatabaseCreater.cs içinde: satır 34
+
+>>>19.12.2021 17:57:35  DatabaseCreater
+No database selected
+   konum: MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   konum: MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   konum: MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   konum: HeapOverflow.Config.DatabaseCreater.RunCreateQuery(String query) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\Config\DatabaseCreater.cs içinde: satır 34
+
+>>>19.12.2021 17:57:35  PostDAO
+Table 'heapow.post' doesn't exist
+   konum: MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   konum: MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   konum: MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteScalar()
+   konum: HeapOverflow.DAO.Impl.PostDAO.GetSize() G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\PostDAO.cs içinde: satır 361
+
+>>>19.12.2021 17:57:35  PostDAO
+Table 'heapow.post' doesn't exist
+   konum: MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   konum: MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   konum: MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   konum: HeapOverflow.DAO.Impl.PostDAO.GetAllByPagination(Int32 offset, Int32 next) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\PostDAO.cs içinde: satır 269
+
+>>>19.12.2021 17:57:35  Index.aspx
+Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+   konum: HeapOverflow.Home.Index.FillPosts(List`1 posts) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\Home\Index.aspx.cs içinde: satır 88
+
+>>>19.12.2021 18:00:16  DatabaseCreater
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general' at line 1
+   konum: MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   konum: MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   konum: MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   konum: HeapOverflow.Config.DatabaseCreater.RunCreateQuery(String query, Boolean isDatabase) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\Config\DatabaseCreater.cs içinde: satır 39
+
+>>>19.12.2021 18:00:16  DatabaseCreater
+Key column 'id' doesn't exist in table
+   konum: MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   konum: MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   konum: MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   konum: HeapOverflow.Config.DatabaseCreater.RunCreateQuery(String query, Boolean isDatabase) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\Config\DatabaseCreater.cs içinde: satır 39
+
+>>>19.12.2021 18:00:16  DatabaseCreater
+Failed to open the referenced table 'user_login'
+   konum: MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   konum: MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   konum: MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   konum: HeapOverflow.Config.DatabaseCreater.RunCreateQuery(String query, Boolean isDatabase) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\Config\DatabaseCreater.cs içinde: satır 39
+
+>>>19.12.2021 18:00:16  DatabaseCreater
+Failed to open the referenced table 'user_login'
+   konum: MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   konum: MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   konum: MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   konum: HeapOverflow.Config.DatabaseCreater.RunCreateQuery(String query, Boolean isDatabase) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\Config\DatabaseCreater.cs içinde: satır 39
+
+>>>19.12.2021 18:00:16  DatabaseCreater
+Failed to open the referenced table 'user_login'
+   konum: MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   konum: MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   konum: MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   konum: HeapOverflow.Config.DatabaseCreater.RunCreateQuery(String query, Boolean isDatabase) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\Config\DatabaseCreater.cs içinde: satır 39
+
+>>>19.12.2021 18:00:16  PostDAO
+Table 'heapow.post' doesn't exist
+   konum: MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   konum: MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   konum: MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteScalar()
+   konum: HeapOverflow.DAO.Impl.PostDAO.GetSize() G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\PostDAO.cs içinde: satır 361
+
+>>>19.12.2021 18:00:16  PostDAO
+Table 'heapow.post' doesn't exist
+   konum: MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   konum: MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   konum: MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   konum: HeapOverflow.DAO.Impl.PostDAO.GetAllByPagination(Int32 offset, Int32 next) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\PostDAO.cs içinde: satır 269
+
+>>>19.12.2021 18:00:16  Index.aspx
+Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+   konum: HeapOverflow.Home.Index.FillPosts(List`1 posts) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\Home\Index.aspx.cs içinde: satır 88
+
+>>>19.12.2021 18:01:12  DatabaseCreater
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general' at line 1
+   konum: MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   konum: MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   konum: MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   konum: HeapOverflow.Config.DatabaseCreater.RunCreateQuery(String query, Boolean isDatabase) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\Config\DatabaseCreater.cs içinde: satır 39
+
+>>>19.12.2021 18:01:12  DatabaseCreater
+Key column 'id' doesn't exist in table
+   konum: MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   konum: MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   konum: MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   konum: HeapOverflow.Config.DatabaseCreater.RunCreateQuery(String query, Boolean isDatabase) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\Config\DatabaseCreater.cs içinde: satır 39
+
+>>>19.12.2021 18:01:12  DatabaseCreater
+Failed to open the referenced table 'user_login'
+   konum: MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   konum: MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   konum: MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   konum: HeapOverflow.Config.DatabaseCreater.RunCreateQuery(String query, Boolean isDatabase) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\Config\DatabaseCreater.cs içinde: satır 39
+
+>>>19.12.2021 18:01:12  DatabaseCreater
+Failed to open the referenced table 'user_login'
+   konum: MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   konum: MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   konum: MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   konum: HeapOverflow.Config.DatabaseCreater.RunCreateQuery(String query, Boolean isDatabase) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\Config\DatabaseCreater.cs içinde: satır 39
+
+>>>19.12.2021 18:01:12  DatabaseCreater
+Failed to open the referenced table 'user_login'
+   konum: MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   konum: MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   konum: MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   konum: HeapOverflow.Config.DatabaseCreater.RunCreateQuery(String query, Boolean isDatabase) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\Config\DatabaseCreater.cs içinde: satır 39
+
+>>>19.12.2021 18:01:12  PostDAO
+Table 'heapow.post' doesn't exist
+   konum: MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   konum: MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   konum: MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteScalar()
+   konum: HeapOverflow.DAO.Impl.PostDAO.GetSize() G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\PostDAO.cs içinde: satır 361
+
+>>>19.12.2021 18:01:12  PostDAO
+Table 'heapow.post' doesn't exist
+   konum: MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   konum: MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   konum: MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   konum: HeapOverflow.DAO.Impl.PostDAO.GetAllByPagination(Int32 offset, Int32 next) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\PostDAO.cs içinde: satır 269
+
+>>>19.12.2021 18:01:12  Index.aspx
+Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+   konum: HeapOverflow.Home.Index.FillPosts(List`1 posts) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\Home\Index.aspx.cs içinde: satır 88
+
+>>>19.12.2021 18:01:15  PostDAO
+Table 'heapow.post' doesn't exist
+   konum: MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   konum: MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   konum: MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteScalar()
+   konum: HeapOverflow.DAO.Impl.PostDAO.GetSize() G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\PostDAO.cs içinde: satır 361
+
+>>>19.12.2021 18:01:15  PostDAO
+Table 'heapow.post' doesn't exist
+   konum: MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   konum: MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   konum: MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   konum: HeapOverflow.DAO.Impl.PostDAO.GetAllByPagination(Int32 offset, Int32 next) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\PostDAO.cs içinde: satır 269
+
+>>>19.12.2021 18:01:15  Index.aspx
+Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+   konum: HeapOverflow.Home.Index.FillPosts(List`1 posts) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\Home\Index.aspx.cs içinde: satır 88
+
+>>>19.12.2021 18:01:15  PostDAO
+Table 'heapow.post' doesn't exist
+   konum: MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   konum: MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   konum: MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteScalar()
+   konum: HeapOverflow.DAO.Impl.PostDAO.GetSize() G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\PostDAO.cs içinde: satır 361
+
+>>>19.12.2021 18:01:15  PostDAO
+Table 'heapow.post' doesn't exist
+   konum: MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   konum: MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   konum: MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   konum: HeapOverflow.DAO.Impl.PostDAO.GetAllByPagination(Int32 offset, Int32 next) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\PostDAO.cs içinde: satır 269
+
+>>>19.12.2021 18:01:15  Index.aspx
+Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+   konum: HeapOverflow.Home.Index.FillPosts(List`1 posts) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\Home\Index.aspx.cs içinde: satır 88
+
+>>>19.12.2021 18:01:17  PostDAO
+Table 'heapow.post' doesn't exist
+   konum: MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   konum: MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   konum: MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteScalar()
+   konum: HeapOverflow.DAO.Impl.PostDAO.GetSize() G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\PostDAO.cs içinde: satır 361
+
+>>>19.12.2021 18:01:17  PostDAO
+Table 'heapow.post' doesn't exist
+   konum: MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   konum: MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   konum: MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   konum: HeapOverflow.DAO.Impl.PostDAO.GetAllByPagination(Int32 offset, Int32 next) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\PostDAO.cs içinde: satır 269
+
+>>>19.12.2021 18:01:17  Index.aspx
+Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+   konum: HeapOverflow.Home.Index.FillPosts(List`1 posts) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\Home\Index.aspx.cs içinde: satır 88
+
+>>>19.12.2021 18:01:23  PostDAO
+Table 'heapow.post' doesn't exist
+   konum: MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   konum: MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   konum: MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteScalar()
+   konum: HeapOverflow.DAO.Impl.PostDAO.GetSize() G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\PostDAO.cs içinde: satır 361
+
+>>>19.12.2021 18:01:23  PostDAO
+Table 'heapow.post' doesn't exist
+   konum: MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   konum: MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   konum: MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   konum: HeapOverflow.DAO.Impl.PostDAO.GetAllByPagination(Int32 offset, Int32 next) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\PostDAO.cs içinde: satır 269
+
+>>>19.12.2021 18:01:23  Index.aspx
+Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+   konum: HeapOverflow.Home.Index.FillPosts(List`1 posts) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\Home\Index.aspx.cs içinde: satır 88
+
+>>>19.12.2021 18:02:52  DatabaseCreater
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general' at line 1
+   konum: MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   konum: MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   konum: MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   konum: HeapOverflow.Config.DatabaseCreater.RunCreateQuery(String query, Boolean isDatabase) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\Config\DatabaseCreater.cs içinde: satır 39
+
+>>>19.12.2021 18:02:52  DatabaseCreater
+Key column 'id' doesn't exist in table
+   konum: MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   konum: MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   konum: MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   konum: HeapOverflow.Config.DatabaseCreater.RunCreateQuery(String query, Boolean isDatabase) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\Config\DatabaseCreater.cs içinde: satır 39
+
+>>>19.12.2021 18:02:52  DatabaseCreater
+Failed to open the referenced table 'user_login'
+   konum: MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   konum: MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   konum: MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   konum: HeapOverflow.Config.DatabaseCreater.RunCreateQuery(String query, Boolean isDatabase) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\Config\DatabaseCreater.cs içinde: satır 39
+
+>>>19.12.2021 18:02:52  DatabaseCreater
+Failed to open the referenced table 'user_login'
+   konum: MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   konum: MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   konum: MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   konum: HeapOverflow.Config.DatabaseCreater.RunCreateQuery(String query, Boolean isDatabase) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\Config\DatabaseCreater.cs içinde: satır 39
+
+>>>19.12.2021 18:02:52  DatabaseCreater
+Failed to open the referenced table 'user_login'
+   konum: MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   konum: MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   konum: MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   konum: HeapOverflow.Config.DatabaseCreater.RunCreateQuery(String query, Boolean isDatabase) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\Config\DatabaseCreater.cs içinde: satır 39
+
+>>>19.12.2021 18:02:52  PostDAO
+Table 'heapow.post' doesn't exist
+   konum: MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   konum: MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   konum: MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteScalar()
+   konum: HeapOverflow.DAO.Impl.PostDAO.GetSize() G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\PostDAO.cs içinde: satır 361
+
+>>>19.12.2021 18:02:52  PostDAO
+Table 'heapow.post' doesn't exist
+   konum: MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   konum: MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   konum: MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   konum: HeapOverflow.DAO.Impl.PostDAO.GetAllByPagination(Int32 offset, Int32 next) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\PostDAO.cs içinde: satır 269
+
+>>>19.12.2021 18:02:52  Index.aspx
+Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+   konum: HeapOverflow.Home.Index.FillPosts(List`1 posts) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\Home\Index.aspx.cs içinde: satır 88
+
+>>>19.12.2021 18:05:10  DatabaseCreater
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general' at line 1
+   konum: MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   konum: MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   konum: MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   konum: HeapOverflow.Config.DatabaseCreater.RunCreateQuery(String query, Boolean isDatabase) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\Config\DatabaseCreater.cs içinde: satır 50
+
+>>>19.12.2021 18:05:11  DatabaseCreater
+Key column 'id' doesn't exist in table
+   konum: MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   konum: MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   konum: MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   konum: HeapOverflow.Config.DatabaseCreater.RunCreateQuery(String query, Boolean isDatabase) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\Config\DatabaseCreater.cs içinde: satır 50
+
+>>>19.12.2021 18:05:11  DatabaseCreater
+Failed to open the referenced table 'user_login'
+   konum: MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   konum: MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   konum: MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   konum: HeapOverflow.Config.DatabaseCreater.RunCreateQuery(String query, Boolean isDatabase) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\Config\DatabaseCreater.cs içinde: satır 50
+
+>>>19.12.2021 18:05:11  DatabaseCreater
+Failed to open the referenced table 'user_login'
+   konum: MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   konum: MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   konum: MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   konum: HeapOverflow.Config.DatabaseCreater.RunCreateQuery(String query, Boolean isDatabase) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\Config\DatabaseCreater.cs içinde: satır 50
+
+>>>19.12.2021 18:05:11  DatabaseCreater
+Failed to open the referenced table 'user_login'
+   konum: MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   konum: MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   konum: MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   konum: HeapOverflow.Config.DatabaseCreater.RunCreateQuery(String query, Boolean isDatabase) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\Config\DatabaseCreater.cs içinde: satır 50
+
+>>>19.12.2021 18:05:11  PostDAO
+Table 'heapow.post' doesn't exist
+   konum: MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   konum: MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   konum: MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteScalar()
+   konum: HeapOverflow.DAO.Impl.PostDAO.GetSize() G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\PostDAO.cs içinde: satır 361
+
+>>>19.12.2021 18:05:11  PostDAO
+Table 'heapow.post' doesn't exist
+   konum: MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   konum: MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   konum: MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   konum: HeapOverflow.DAO.Impl.PostDAO.GetAllByPagination(Int32 offset, Int32 next) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\PostDAO.cs içinde: satır 269
+
+>>>19.12.2021 18:05:11  Index.aspx
+Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+   konum: HeapOverflow.Home.Index.FillPosts(List`1 posts) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\Home\Index.aspx.cs içinde: satır 88
+
+>>>19.12.2021 18:07:00  DatabaseCreater
+Key column 'id' doesn't exist in table
+   konum: MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   konum: MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   konum: MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   konum: HeapOverflow.Config.DatabaseCreater.RunCreateQuery(String query, Boolean isDatabase) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\Config\DatabaseCreater.cs içinde: satır 50
+
+>>>19.12.2021 18:07:00  DatabaseCreater
+Failed to open the referenced table 'user_login'
+   konum: MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   konum: MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   konum: MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   konum: HeapOverflow.Config.DatabaseCreater.RunCreateQuery(String query, Boolean isDatabase) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\Config\DatabaseCreater.cs içinde: satır 50
+
+>>>19.12.2021 18:07:00  DatabaseCreater
+Failed to open the referenced table 'user_login'
+   konum: MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   konum: MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   konum: MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   konum: HeapOverflow.Config.DatabaseCreater.RunCreateQuery(String query, Boolean isDatabase) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\Config\DatabaseCreater.cs içinde: satır 50
+
+>>>19.12.2021 18:07:00  DatabaseCreater
+Failed to open the referenced table 'user_login'
+   konum: MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   konum: MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   konum: MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   konum: HeapOverflow.Config.DatabaseCreater.RunCreateQuery(String query, Boolean isDatabase) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\Config\DatabaseCreater.cs içinde: satır 50
+
+>>>19.12.2021 18:07:00  PostDAO
+Table 'heapow.post' doesn't exist
+   konum: MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   konum: MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   konum: MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteScalar()
+   konum: HeapOverflow.DAO.Impl.PostDAO.GetSize() G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\PostDAO.cs içinde: satır 361
+
+>>>19.12.2021 18:07:00  PostDAO
+Table 'heapow.post' doesn't exist
+   konum: MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   konum: MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   konum: MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   konum: MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   konum: MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   konum: HeapOverflow.DAO.Impl.PostDAO.GetAllByPagination(Int32 offset, Int32 next) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\PostDAO.cs içinde: satır 269
+
+>>>19.12.2021 18:07:00  Index.aspx
+Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+   konum: HeapOverflow.Home.Index.FillPosts(List`1 posts) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\Home\Index.aspx.cs içinde: satır 88
+
