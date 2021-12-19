@@ -298,3 +298,19 @@ Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
 Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
    konum: HeapOverflow.DAO.Impl.VotesDAO.GetVote(UserLogin login, Post post) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\VotesDAO.cs içinde: satır 79
 
+>>>17.12.2021 17:00:43  VotesDAO
+Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+   konum: HeapOverflow.DAO.Impl.VotesDAO.GetVote(UserLogin login, Post post) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\VotesDAO.cs içinde: satır 79
+
+>>>17.12.2021 17:00:55  VotesDAO
+Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+   konum: HeapOverflow.DAO.Impl.VotesDAO.GetVote(UserLogin login, Post post) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\VotesDAO.cs içinde: satır 79
+
+>>>17.12.2021 17:01:06  VotesDAO
+Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+   konum: HeapOverflow.DAO.Impl.VotesDAO.GetVote(UserLogin login, Post post) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\VotesDAO.cs içinde: satır 79
+
+>>>17.12.2021 17:01:09  VotesDAO
+Nesne başvurusu bir nesnenin örneğine ayarlanmadı.
+   konum: HeapOverflow.DAO.Impl.VotesDAO.GetVote(UserLogin login, Post post) G:\MyFiles\Programming\CSharpProjects\HeapOverflow\HeapOverflow\HeapOverflow\DAO\Impl\VotesDAO.cs içinde: satır 79
+
