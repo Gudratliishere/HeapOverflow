@@ -2,8 +2,8 @@
 <details>
   <host>localhost</host>
   <port>3306</port>
-  <username>root</username>
-  <password>2002</password>
+  <username></username>
+  <password></password>
   <database>heapoverflow</database>
   <crypt_power>0</crypt_power>
 </details>
