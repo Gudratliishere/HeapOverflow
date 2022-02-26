@@ -90,6 +90,7 @@
     <Content Include="Home\Logout.aspx" />
     <Content Include="Home\NewPost.aspx" />
     <Content Include="Home\PostDetail.aspx" />
+    <Content Include="Home\Redirect.aspx" />
     <Content Include="Home\RemoveComment.aspx" />
     <Content Include="Home\RemovePost.aspx" />
     <Content Include="Image\example.jpg" />
@@ -229,6 +230,13 @@
     </Compile>
     <Compile Include="Home\PostDetail.aspx.designer.cs">
       <DependentUpon>PostDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\Redirect.aspx.cs">
+      <DependentUpon>Redirect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\Redirect.aspx.designer.cs">
+      <DependentUpon>Redirect.aspx</DependentUpon>
     </Compile>
     <Compile Include="Home\RemoveComment.aspx.cs">
       <DependentUpon>RemoveComment.aspx</DependentUpon>
