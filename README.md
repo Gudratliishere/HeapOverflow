@@ -1,7 +1,7 @@
 # HeapOverflow
 
-[HeapOverflow](heapoverflow.somee.com)  
-heapoverflow.somee.com
+[HeapOverflow](http://heapoverflow.somee.com)  
+http://heapoverflow.somee.com
 
 This is discussion forum project built in ASP.NET framework. You can share post, comment and like them etc.  
 
