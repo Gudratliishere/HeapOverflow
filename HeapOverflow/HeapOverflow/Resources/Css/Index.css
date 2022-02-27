@@ -189,8 +189,16 @@ header {
         padding: 10px;
     }
 
+    .search-box select:focus {
+        outline: none;
+    }
+
     .search-box input {
         padding: 10px;
+    }
+
+    .search-box input:focus {
+        outline: none;
     }
 
     .search-box input[type=submit] {
@@ -244,6 +252,11 @@ footer {
     .table-head .replies {
         flex: 20%;
     }
+
+.subjects a {
+    text-decoration: none;
+    color: #ff523a;
+}
 
 .table-row {
     display: flex;

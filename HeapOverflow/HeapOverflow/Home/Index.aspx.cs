@@ -117,7 +117,7 @@ namespace HeapOverflow.Home
         private HtmlGenericControl GetDivReplies(Post post)
         {
             HtmlGenericControl span = new HtmlGenericControl("span");
-            span.InnerHtml = commentDAO.GetCommentsByPost(post).Count.ToString() + " replies\n" + voteDAO.GetLikesCountByPost(post) + " likes";
+            span.InnerHtml = commentDAO.GetCommentsSizeByPost(post).ToString() + " replies\n" + voteDAO.GetLikesCountByPost(post) + " likes";
 
             HtmlGenericControl replies = new HtmlGenericControl("div");
             replies.Attributes.Add("class", "replies");

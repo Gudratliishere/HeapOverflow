@@ -7,13 +7,14 @@ using System.Threading.Tasks;
 
 namespace HeapOverflow.DAO.Inter
 {
-    public interface ICommentDAO
-    {
-        List<Comment> GetCommentsByPost(Post post);
+	public interface ICommentDAO
+	{
+		List<Comment> GetCommentsByPost(Post post);
+		int GetCommentsSizeByPost(Post post);
 		Comment GetCommentById(int id);
-        Comment AddComment(Comment comment);
-        Comment UpdateComment(Comment comment);
-        void RemoveComment(int id);
-        void RemoveCommentByPost(int postId);
-    }
+		Comment AddComment(Comment comment);
+		Comment UpdateComment(Comment comment);
+		void RemoveComment(int id);
+		void RemoveCommentByPost(int postId);
+	}
 }

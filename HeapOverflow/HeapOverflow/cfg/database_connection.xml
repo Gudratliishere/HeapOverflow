@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <details>
-  <host>localhost</host>
+  <host>sql6.freemysqlhosting.net</host>
   <port>3306</port>
-  <username></username>
-  <password></password>
-  <database>heapoverflow</database>
+  <username>sql6475503</username>
+  <password>XIcmA3ugyY</password>
+  <database>sql6475503</database>
   <crypt_power>0</crypt_power>
 </details>
