@@ -169,8 +169,15 @@
     <Compile Include="Config\DatabaseCreater.cs" />
     <Compile Include="Config\Logger.cs" />
     <Compile Include="DAO\Impl\AdminDAO.cs" />
+    <Compile Include="DAO\Impl\RAM\AdminRAMDAO.cs" />
     <Compile Include="DAO\Impl\CommentDAO.cs" />
     <Compile Include="DAO\Impl\PostDAO.cs" />
+    <Compile Include="DAO\Impl\RAM\CommentRAMDAO.cs" />
+    <Compile Include="DAO\Impl\RAM\PostRAMDAO.cs" />
+    <Compile Include="DAO\Impl\RAM\RoleRAMDAO.cs" />
+    <Compile Include="DAO\Impl\RAM\UserLoginRAMDAO.cs" />
+    <Compile Include="DAO\Impl\RAM\UsersRAMDAO.cs" />
+    <Compile Include="DAO\Impl\RAM\VoteRAMDAO.cs" />
     <Compile Include="DAO\Impl\RoleDAO.cs" />
     <Compile Include="DAO\Impl\UserLoginDAO.cs" />
     <Compile Include="DAO\Impl\UsersDAO.cs" />

@@ -14,7 +14,9 @@
 	<form id="login" runat="server">
 		<header>
 			<div class="navbar">
-				<div class="brand">Heap Overflow</div>
+				<a href="Index.aspx" style="text-decoration: none; color: white;">
+					<div class="brand">Heap Overflow</div>
+				</a>
 			</div>
 		</header>
 		<div class="container">

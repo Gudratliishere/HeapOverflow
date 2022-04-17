@@ -26,7 +26,9 @@
 					</ul>
 				</nav>
 				<a href="#" class="bar-icon" id="iconBar"><i class="fa fa-bars" onclick="hideIconBar()"></i></a>
-				<div class="brand">Heap Overflow</div>
+				<a href="Index.aspx" style="text-decoration: none; color: white;">
+					<div class="brand">Heap Overflow</div>
+				</a>
 				<div class="account">
 					<asp:Button ID="btn_login" runat="server" Text="Login" CssClass="login" OnClick="btn_login_Click" />
 					<asp:Button ID="btn_register" runat="server" Text="Register" CssClass="register" OnClick="btn_register_Click" />
