@@ -38,6 +38,8 @@ namespace HeapOverflow.DAO.Impl.RAM
 
 		public Votes GetVote(UserLogin login, Post post)
 		{
+			if (login == null)
+				return null;
 			foreach (Votes vote in votes)
 				if (vote.Post.Id == post.Id && vote.User.Id == login.Id)
 					return vote;
