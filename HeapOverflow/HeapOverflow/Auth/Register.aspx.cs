@@ -58,12 +58,21 @@ namespace HeapOverflow.Auth
             if (!EmptyFieldExists() && CheckPasswordMatch() && !CheckUsernameExists() && !CheckEmailExists())
             {
                 login = PrepareUserLogin();
-                emailSender = new EmailSender();
-                emailSender.Email = tb_email.Text.Trim();
-                emailSender.SendEmail();
-				btn_registerBody.Enabled = false;
-                pnl_emailConfirm.Visible = true;
-                btn_register.Visible = false;
+
+				Users user = new Users();
+				usersDAO.AddUser(user);
+				login.User = user;
+				loginDAO.AddUserLogin(login);
+
+				Session["user"] = login.Id;
+				Response.Redirect("../Account/UserEdit.aspx");
+
+				//emailSender = new EmailSender();
+				//emailSender.Email = tb_email.Text.Trim();
+				//emailSender.SendEmail();
+				//btn_registerBody.Enabled = false;
+				//pnl_emailConfirm.Visible = true;
+				//btn_register.Visible = false;
             }
         }
 
